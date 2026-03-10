@@ -62,7 +62,7 @@ const DrawerTrigger: React.FC<TriggerProps> = ({
     <DrawerPrimitive.Trigger
       data-slot="drawer-trigger"
       className={twMerge(
-        `inline-flex justify-center items-center border border-app-content rounded-sm bg-clip-padding text-sm font-medium whitespace-nowrap ${variantClasses[variant]} ${sizeClasses[size]} ${className}`,
+        `inline-flex justify-center items-center border border-transparent rounded-sm bg-clip-padding text-sm font-medium whitespace-nowrap ${variantClasses[variant]} ${sizeClasses[size]} ${className}`,
       )}
     >
       {children}

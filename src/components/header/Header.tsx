@@ -1,6 +1,9 @@
 // DATA //
 import logo from "../../assets/logo-b.svg";
 
+// COMPONENTS //
+import MenuDrawer from "../common/MenuDrawer";
+
 // UI //
 import { LuMenu } from "react-icons/lu";
 
@@ -12,7 +15,11 @@ const Header = () => {
           <img src={logo} className="h-6" />
           <span>Julien Bouchez</span>
         </section>
-        <LuMenu className="text-app-content text-3xl" />
+        <MenuDrawer
+          direction="right"
+          triggerVariant="default"
+          triggerSize="icon"
+        />
       </div>
     </div>
   );

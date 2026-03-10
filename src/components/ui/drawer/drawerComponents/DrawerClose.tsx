@@ -34,7 +34,7 @@ const DrawerClose: React.FC<CloseProps> = ({
 }) => {
   // Variant Classes
   const variantClasses = {
-    default: "bg-primary text-primary-foreground hover:bg-brand-300/70",
+    default: "bg-transparent text-app-content hover:bg-hover",
     outline:
       "border-border text-secondary-foreground/70 bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/70 aria-expanded:bg-muted aria-expanded:text-foreground",
     secondary:
