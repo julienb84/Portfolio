@@ -31,7 +31,7 @@ function Button({
 }) {
   // Variant Classes
   const variantClasses = {
-    default: "bg-primary text-primary-foreground hover:bg-brand-300/70",
+    default: "bg-app-background text-app-content hover:bg-hover",
     outline:
       "border-border text-secondary-foreground/70 bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/70 aria-expanded:bg-muted aria-expanded:text-foreground",
     secondary:
@@ -61,7 +61,7 @@ function Button({
     <ButtonPrimitive
       data-slot="button"
       className={twMerge(
-        `focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 rounded-sm border border-transparent bg-clip-padding text-sm font-medium focus-visible:ring-3 aria-invalid:ring-3 inline-flex items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none group/button select-none ${sizeClasses[size]} ${variantClasses[variant]} ${className}`,
+        `focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 rounded-sm border border-app-content bg-clip-padding text-sm font-medium focus-visible:ring-3 aria-invalid:ring-3 inline-flex items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 shrink-0 outline-none group/button select-none ${sizeClasses[size]} ${variantClasses[variant]} ${className}`,
       )}
       {...props}
     />
