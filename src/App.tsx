@@ -1,4 +1,5 @@
 // COMPONENTS //
+import Header from "./components/header/Header";
 
 // REACT HOOKS & COMPONENTS //
 import { useState } from "react";
@@ -8,9 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-center text-app-content font-bold">
-        <h1>Joucou</h1>
-      </div>
+      <Header />
     </>
   );
 }
