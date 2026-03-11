@@ -13,12 +13,12 @@ import { LuMenu } from "react-icons/lu";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isClosed, setIsClosed] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="h-16 w-screen">
       <div className="h-full flex p-5 justify-between items-center">
         <section
-          className="text-app-content flex items-center gap-2.5 text-[18px] font-semibold"
+          className="text-app-content flex items-center gap-2.5 text-[18px] font-semibold hover:cursor-pointer"
           onClick={() => {
             navigate("/");
           }}
@@ -30,8 +30,8 @@ const Header = () => {
           direction="right"
           triggerVariant="default"
           triggerSize="icon"
-          isClosed={isClosed}
-          setIsClosed={setIsClosed}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
         />
       </div>
     </div>

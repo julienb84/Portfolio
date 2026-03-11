@@ -33,32 +33,42 @@ interface MenuDrawerProps {
     | "icon-xs"
     | "icon-sm"
     | "icon-lg";
-  isClosed: boolean;
-  setIsClosed: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const MenuDrawer: React.FC<MenuDrawerProps> = ({
   direction,
   triggerVariant,
   triggerSize,
-  isClosed,
-  setIsClosed,
+  isOpen,
+  setIsOpen,
 }) => {
   const navigate = useNavigate();
   return (
     <>
-      <Drawer direction={direction}>
+      <Drawer direction={direction} open={isOpen}>
         <DrawerTrigger
           variant={triggerVariant}
           size={triggerSize}
           className="hover:bg-hovercolor"
         >
-          <LuMenu className="text-2xl" />
+          <LuMenu
+            className="text-2xl"
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          />
         </DrawerTrigger>
         <DrawerContent className="data-[vaul-drawer-direction=right]:border-transparent">
           <DrawerHeader className="items-end pr-3">
             <DrawerClose variant="default" size="icon" className="inline-flex">
-              <MdClose className="text-3xl" />
+              <MdClose
+                className="text-3xl"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              />
             </DrawerClose>
             <DrawerTitle></DrawerTitle>
             <DrawerDescription></DrawerDescription>
@@ -70,7 +80,7 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({
               className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
               onClick={() => {
                 navigate("/projects");
-                setIsClosed(true);
+                setIsOpen(false);
               }}
             >
               Projets
