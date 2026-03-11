@@ -1,8 +1,13 @@
+// COMPONENTS //
+import PageLayout from "../layouts/PageLayout";
+
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-app-content">coucou</h1>
-    </div>
+    <>
+      <div>
+        <h1 className="text-app-content">coucou</h1>
+      </div>
+    </>
   );
 };
 
