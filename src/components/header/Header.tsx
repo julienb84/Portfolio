@@ -2,21 +2,20 @@
 import logo from "../../assets/logo-b.svg";
 
 // COMPONENTS //
-import MenuDrawer from "../common/MenuDrawer";
+import DrawerMenu from "../common/DrawerMenu";
 
 // REACT HOOKS & COMPONENTS //
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 // UI //
-import { LuMenu } from "react-icons/lu";
 
 const Header = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="h-16 w-screen">
-      <div className="h-full flex p-5 justify-between items-center">
+      <div className="h-full flex p-4 justify-between items-center">
         <section
           className="text-app-content flex items-center gap-2.5 text-[18px] font-semibold hover:cursor-pointer"
           onClick={() => {
@@ -26,7 +25,7 @@ const Header = () => {
           <img src={logo} className="h-6" />
           <span>Julien Bouchez</span>
         </section>
-        <MenuDrawer
+        <DrawerMenu
           direction="right"
           triggerVariant="default"
           triggerSize="icon"

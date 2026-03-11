@@ -15,7 +15,7 @@ import { MdClose } from "react-icons/md";
 import { LuMenu } from "react-icons/lu";
 import Button from "../ui/Button";
 
-interface MenuDrawerProps {
+interface DrawerMenuProps {
   direction?: "top" | "left" | "right";
   triggerVariant?:
     | "default"
@@ -37,7 +37,7 @@ interface MenuDrawerProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MenuDrawer: React.FC<MenuDrawerProps> = ({
+const DrawerMenu: React.FC<DrawerMenuProps> = ({
   direction,
   triggerVariant,
   triggerSize,
@@ -90,7 +90,7 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({
               target="_blank"
               className="text-[28px] italic font-medium px-3 hover:cursor-default hover:font-semibold transition-all duration-300"
             >
-              Profile Github
+              Profile GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/julien-bouchez-developer/"
@@ -106,4 +106,4 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({
   );
 };
 
-export default MenuDrawer;
+export default DrawerMenu;
