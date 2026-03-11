@@ -8,7 +8,7 @@ import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
 import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 
 // REACT HOOKS & COMPONENTS //
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // UI //
 import { MdClose } from "react-icons/md";
@@ -33,13 +33,18 @@ interface MenuDrawerProps {
     | "icon-xs"
     | "icon-sm"
     | "icon-lg";
+  isClosed: boolean;
+  setIsClosed: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const MenuDrawer: React.FC<MenuDrawerProps> = ({
   direction,
   triggerVariant,
   triggerSize,
+  isClosed,
+  setIsClosed,
 }) => {
+  const navigate = useNavigate();
   return (
     <>
       <Drawer direction={direction}>
@@ -62,21 +67,25 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({
             <Button
               variant="default"
               size="lg"
-              className="h-10 bg-transparent text-3xl italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
+              className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
+              onClick={() => {
+                navigate("/projects");
+                setIsClosed(true);
+              }}
             >
               Projets
             </Button>
             <a
               href="https://github.com/julienb84"
               target="_blank"
-              className="text-3xl italic font-medium px-3 hover:cursor-default hover:font-semibold transition-all duration-300"
+              className="text-[28px] italic font-medium px-3 hover:cursor-default hover:font-semibold transition-all duration-300"
             >
               Profile Github
             </a>
             <a
               href="https://www.linkedin.com/in/julien-bouchez-developer/"
               target="_blank"
-              className="text-3xl italic font-medium px-3 hover:cursor-default hover:font-semibold transition-all duration-300"
+              className="text-[28px] italic font-medium px-3 hover:cursor-default hover:font-semibold transition-all duration-300"
             >
               Profile LinkedIn
             </a>
