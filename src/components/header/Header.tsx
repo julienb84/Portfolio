@@ -22,7 +22,7 @@ const Header = () => {
             navigate("/");
           }}
         >
-          <img src={logo} className="h-6" />
+          <img src={logo} className="h-6 z-1000" />
           <span>Julien Bouchez</span>
         </section>
         <DrawerMenu

@@ -132,6 +132,7 @@
   --color-error-700: #4b010b;
 
   --breakpoint-xs: 24rem;
+  --breakpoint-vs: 30rem;
 
   /* shadCN Themes */
   --font-sans: "Montserrat", sans-serif;

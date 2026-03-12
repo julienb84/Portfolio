@@ -33,7 +33,7 @@ const DrawerTrigger: React.FC<TriggerProps> = ({
 }) => {
   // Variant Classes
   const variantClasses = {
-    default: "bg-app-background text-app-content hover:bg-hover",
+    default: "bg-app-background text-app-content hover:bg-hovercolor",
     outline:
       "border-border text-secondary-foreground/70 bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/70 aria-expanded:bg-muted aria-expanded:text-foreground",
     secondary:
