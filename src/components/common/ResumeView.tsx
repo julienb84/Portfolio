@@ -80,7 +80,7 @@ const ResumeView: React.FC<ResumeViewProps> = ({
               onClick={handleClick}
             >
               Télécharger
-              <IoArrowDownOutline />
+              <IoArrowDownOutline className="animate-bounce" />
             </Button>
             <DrawerClose className="w-2xs xs:w-90">Close</DrawerClose>
           </DrawerFooter>
