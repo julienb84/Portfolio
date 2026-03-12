@@ -1,3 +1,4 @@
+// COMPONENTS //
 import Drawer from "../ui/drawer/drawerComponents/Drawer";
 import DrawerClose from "../ui/drawer/drawerComponents/DrawerClose";
 import DrawerContent from "../ui/drawer/drawerLayout/DrawerContent";
@@ -8,10 +9,13 @@ import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
 import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 import Button from "../ui/Button";
 
+// DATA //
 import cv from "../../assets/CV_dev_02-2026_SVG.svg";
 import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
 
-import { BiAlignMiddle } from "react-icons/bi";
+// UI //
+import { ImProfile } from "react-icons/im";
+import { IoArrowDownOutline } from "react-icons/io5";
 
 interface ResumeViewProps {
   direction?: "top" | "left" | "right";
@@ -58,7 +62,7 @@ const ResumeView: React.FC<ResumeViewProps> = ({
           className={triggerClassName}
         >
           Voir mon CV
-          <BiAlignMiddle />
+          <ImProfile />
         </DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>
@@ -75,7 +79,8 @@ const ResumeView: React.FC<ResumeViewProps> = ({
               className="w-2xs xs:w-90 border-app-content"
               onClick={handleClick}
             >
-              Download
+              Télécharger
+              <IoArrowDownOutline />
             </Button>
             <DrawerClose className="w-2xs xs:w-90">Close</DrawerClose>
           </DrawerFooter>
