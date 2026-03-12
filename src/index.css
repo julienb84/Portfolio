@@ -96,6 +96,7 @@
   --color-app-background: var(--app-background);
   --color-app-content: var(--app-content);
   --color-hovercolor: var(--hovercolor);
+  --color-logo-background: oklch(0.205 0 0);
 
   --color-brand-25: #fffbfd;
   --color-brand-50: #fef5f8;
