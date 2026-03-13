@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ children, className }) => {
   return (
     <div
       className={twMerge(
-        `w-30 h-16 bg-card flex justify-center items-center rounded-sm text-app-content border border-app-content/20 ${className}`,
+        `w-22 xxs:w-26 xs:w-28 aspect-7/4 bg-card flex justify-center items-center rounded-sm text-app-content border border-app-content/20 ${className}`,
       )}
     >
       {children}
