@@ -10,10 +10,10 @@ import { useEffect } from "react";
 
 // DATA //
 import screenA from "../assets/Screen-VSC.svg";
-import routerLogo from "../assets/rr_lockup_dark.svg";
-import stripeLogo from "../assets/Stripe wordmark - White.svg";
-import nodeLogo from "../assets/nodejsStackedWhite.svg";
-import mongoLogo from "../assets/MongoDB_White.svg";
+import routerLogo from "../assets/brand/rr_lockup_dark.svg";
+import stripeLogo from "../assets/brand/Stripe wordmark - White.svg";
+import nodeLogo from "../assets/brand/nodejsStackedWhite.svg";
+import mongoLogo from "../assets/brand/MongoDB_White.svg";
 
 // UI //
 import { FaReact } from "react-icons/fa";
@@ -23,11 +23,11 @@ import { SiAxios } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { IoArrowForward } from "react-icons/io5";
 
-interface HomeProps {
+type HomeProps = {
   setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};
 
-const Home: React.FC<HomeProps> = ({ setIsHome }) => {
+const Home = ({ setIsHome }: HomeProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
