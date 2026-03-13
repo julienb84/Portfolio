@@ -1,3 +1,6 @@
+// COMPONENTS //
+import PageLayout from "../layouts/PageLayout";
+
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
 
@@ -12,9 +15,11 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHome }) => {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-app-content">projects</h1>
-    </div>
+    <PageLayout>
+      <div>
+        <h1 className="text-app-content">projects</h1>
+      </div>
+    </PageLayout>
   );
 };
 
