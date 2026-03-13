@@ -7,7 +7,7 @@ import DrawerHeader from "../ui/drawer/drawerLayout/DrawerHeader";
 import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
 import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 
-// REACT HOOKS & COMPONENTS //
+// FRAMEWORKS COMPONENTS & HOOKS //
 import { useNavigate } from "react-router-dom";
 
 // UI //

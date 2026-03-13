@@ -1,9 +1,13 @@
 "use client";
+
+// FRAMEWORKS COMPONENTS & HOOKS //
 import * as React from "react";
 import { twMerge } from "tailwind-merge";
 
+// UI //
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 
+// COMPONENTS //
 import Button from "../../Button";
 
 function DialogFooter({

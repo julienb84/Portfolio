@@ -4,7 +4,7 @@ import ResumeView from "../components/common/ResumeView";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
 
-// REACT HOOKS & COMPONENTS //
+// FRAMEWORKS COMPONENTS & HOOKS //
 import { useNavigate } from "react-router-dom";
 
 // DATA //

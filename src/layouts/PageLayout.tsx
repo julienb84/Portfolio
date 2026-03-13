@@ -1,4 +1,4 @@
-// FRAMEWORK COMPONENTS & HOOKS //
+// FRAMEWORKS COMPONENTS & HOOKS //
 import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 

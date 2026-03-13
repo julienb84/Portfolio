@@ -4,7 +4,7 @@ import logo from "../../assets/logo-b.svg";
 // COMPONENTS //
 import DrawerMenu from "../common/DrawerMenu";
 
-// REACT HOOKS & COMPONENTS //
+// FRAMEWORKS COMPONENTS & HOOKS //
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 

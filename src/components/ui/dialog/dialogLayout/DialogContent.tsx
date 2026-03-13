@@ -1,9 +1,14 @@
 "use client";
+
+// FRAMEWORKS COMPONENTS & HOOKS //
 import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
+// UI //
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { XIcon } from "lucide-react";
+
+// COMPONENTS //
 import Button from "../../Button";
 import DialogPortal from "../dialogComponents/DialogPortal";
 import DialogOverlay from "../dialogComponents/DialogOverlay";

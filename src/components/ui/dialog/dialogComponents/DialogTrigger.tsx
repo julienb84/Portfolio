@@ -1,7 +1,10 @@
 "use client";
+
+// FRAMEWORKS COMPONENTS & HOOKS //
 import { twMerge } from "tailwind-merge";
 import type { ReactNode } from "react";
 
+// UI //
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 
 interface TriggerProps {
