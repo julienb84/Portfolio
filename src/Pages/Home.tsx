@@ -71,7 +71,7 @@ const Home = ({ setIsHome }: HomeProps) => {
               j'utilise
             </p>
           </div>
-          <section className="px-4 flex flex-col gap-6">
+          <section className="px-4 flex flex-col gap-6 vs:px-8 sm:px-12">
             <div className="flex flex-col gap-4">
               <h2 className="text-app-content/50 font-semibold">Front-end</h2>
               <div className="flex justify-between">
