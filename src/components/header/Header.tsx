@@ -10,7 +10,11 @@ import { useState } from "react";
 
 // UI //
 
-const Header = () => {
+interface HeaderProps {
+  isHome: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -31,6 +35,7 @@ const Header = () => {
           triggerSize="icon"
           isOpen={isOpen}
           setIsOpen={setIsOpen}
+          isHome={isHome}
         />
       </div>
     </div>

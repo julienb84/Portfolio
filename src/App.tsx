@@ -4,22 +4,27 @@ import Projects from "./Pages/Projects";
 
 // COMPONENTS //
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 // REACT HOOKS & COMPONENTS //
-// import { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [isHome, setIsHome] = useState(false);
 
   return (
     <>
       <Router>
-        <Header />
+        <Header isHome={isHome} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Home setIsHome={setIsHome} />} />
+          <Route
+            path="/projects"
+            element={<Projects setIsHome={setIsHome} />}
+          />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

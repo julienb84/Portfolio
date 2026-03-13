@@ -35,6 +35,7 @@ interface DrawerMenuProps {
     | "icon-lg";
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isHome: boolean;
 }
 
 const DrawerMenu: React.FC<DrawerMenuProps> = ({
@@ -43,6 +44,7 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
   triggerSize,
   isOpen,
   setIsOpen,
+  isHome,
 }) => {
   const navigate = useNavigate();
   return (
@@ -74,17 +76,32 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
             <DrawerDescription></DrawerDescription>
           </DrawerHeader>
           <section className="text-app-content flex flex-col pt-20 pl-3 gap-10">
-            <Button
-              variant="default"
-              size="lg"
-              className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
-              onClick={() => {
-                navigate("/projects");
-                setIsOpen(false);
-              }}
-            >
-              Projets
-            </Button>
+            {isHome ? (
+              <Button
+                variant="default"
+                size="lg"
+                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
+                onClick={() => {
+                  navigate("/projects");
+                  setIsOpen(false);
+                }}
+              >
+                Projets
+              </Button>
+            ) : (
+              <Button
+                variant="default"
+                size="lg"
+                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
+                onClick={() => {
+                  navigate("/");
+                  setIsOpen(false);
+                }}
+              >
+                Home
+              </Button>
+            )}
+
             <a
               href="https://github.com/julienb84"
               target="_blank"

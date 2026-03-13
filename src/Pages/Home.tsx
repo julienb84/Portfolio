@@ -6,9 +6,10 @@ import Button from "../components/ui/Button";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 // DATA //
-import screenA from "../assets/screen-vs_02.svg";
+import screenA from "../assets/Screen-VSC.svg";
 import routerLogo from "../assets/rr_lockup_dark.svg";
 import stripeLogo from "../assets/Stripe wordmark - White.svg";
 import nodeLogo from "../assets/nodejsStackedWhite.svg";
@@ -22,8 +23,17 @@ import { SiAxios } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { IoArrowForward } from "react-icons/io5";
 
-const Home = () => {
+interface HomeProps {
+  setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Home: React.FC<HomeProps> = ({ setIsHome }) => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Home | Julien Bouchez";
+    setIsHome(true);
+  }, []);
 
   return (
     <>
@@ -50,7 +60,7 @@ const Home = () => {
           <div className="px-4">
             <img
               src={screenA}
-              className="aspect-9/16 object-cover object-[18%] rounded-sm brightness-80 sepia-10"
+              className="aspect-9/16 object-cover object-[8%] rounded-sm brightness-80 sepia-10"
             />
           </div>
         </div>
