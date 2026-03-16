@@ -36,7 +36,7 @@ const DialogTrigger: React.FC<TriggerProps> = ({
 }) => {
   // Variant Classes
   const variantClasses = {
-    default: "bg-primary text-primary-foreground hover:bg-brand-300/70",
+    default: "bg-app-background text-app-content hover:cursor-pointer",
     outline:
       "border-border text-secondary-foreground/70 bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/70 aria-expanded:bg-muted aria-expanded:text-foreground",
     secondary:

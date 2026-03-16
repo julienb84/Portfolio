@@ -1,12 +1,11 @@
 // COMPONENTS //
-import Drawer from "../ui/drawer/drawerComponents/Drawer";
-import DrawerClose from "../ui/drawer/drawerComponents/DrawerClose";
-import DrawerContent from "../ui/drawer/drawerLayout/DrawerContent";
-import DrawerDescription from "../ui/drawer/drawerContent/DrawerDescription";
-import DrawerFooter from "../ui/drawer/drawerLayout/DrawerFooter";
-import DrawerHeader from "../ui/drawer/drawerLayout/DrawerHeader";
-import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
-import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
+import Dialog from "../ui/dialog/dialogComponents/Dialog";
+import DialogTrigger from "../ui/dialog/dialogComponents/DialogTrigger";
+import DialogContent from "../ui/dialog/dialogLayout/DialogContent";
+import DialogHeader from "../ui/dialog/dialogLayout/DialogHeader";
+import DialogDescription from "../ui/dialog/dialogContent/DialogDescription";
+import DialogTitle from "../ui/dialog/dialogContent/DialogTitle";
+import DialogFooter from "../ui/dialog/dialogLayout/DialogFooter";
 import Button from "../ui/Button";
 
 // DATA //
@@ -17,8 +16,7 @@ import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
 import { ImProfile } from "react-icons/im";
 import { IoArrowDownOutline } from "react-icons/io5";
 
-interface ResumeViewProps {
-  direction?: "top" | "left" | "right";
+interface ResumeDialogProps {
   triggerVariant?:
     | "default"
     | "outline"
@@ -38,8 +36,7 @@ interface ResumeViewProps {
   triggerClassName?: string;
 }
 
-const ResumeView: React.FC<ResumeViewProps> = ({
-  direction,
+const ResumeDialog: React.FC<ResumeDialogProps> = ({
   triggerVariant,
   triggerSize,
   triggerClassName,
@@ -55,24 +52,24 @@ const ResumeView: React.FC<ResumeViewProps> = ({
 
   return (
     <>
-      <Drawer direction={direction}>
-        <DrawerTrigger
+      <Dialog>
+        <DialogTrigger
           variant={triggerVariant}
           size={triggerSize}
           className={triggerClassName}
         >
           Voir mon CV
           <ImProfile />
-        </DrawerTrigger>
-        <DrawerContent className="data-[vaul-drawer-direction=bottom]:border-transparent">
-          <DrawerHeader>
-            <DrawerTitle></DrawerTitle>
-            <DrawerDescription></DrawerDescription>
-          </DrawerHeader>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle></DialogTitle>
+            <DialogDescription></DialogDescription>
+          </DialogHeader>
           <div className="flex justify-center">
-            <img src={cv} className="w-2xs xs:w-90 lg:w-115" />
+            <img src={cv} className="w-200" />
           </div>
-          <DrawerFooter className="pb-10 xs:pb-5">
+          <DialogFooter className="sm:justify-center">
             <Button
               variant="default"
               size="lg"
@@ -82,12 +79,11 @@ const ResumeView: React.FC<ResumeViewProps> = ({
               Télécharger
               <IoArrowDownOutline className="animate-bounce" />
             </Button>
-            <DrawerClose className="w-2xs xs:w-90">Close</DrawerClose>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
 
-export default ResumeView;
+export default ResumeDialog;

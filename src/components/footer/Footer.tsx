@@ -12,7 +12,7 @@ const Footer = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="min-h-32 w-screen bg-footer-background pt-2 flex justify-center gap-20">
+    <div className="min-h-32 w-screen bg-footer-background pt-2 px-4 flex justify-between xxs:justify-center xxs:gap-8 xs:gap-18 vs:gap-30">
       <div className="flex flex-col gap-5">
         <section className="flex flex-col gap-1 text-[14px]">
           <p className="text-primary/60">Connect</p>

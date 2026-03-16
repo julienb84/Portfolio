@@ -3,6 +3,7 @@ import PageLayout from "../layouts/PageLayout";
 import ResumeView from "../components/common/ResumeView";
 import Card from "../components/ui/Card";
 import Button from "../components/ui/Button";
+import ResumeDialog from "../components/common/ResumeDialog";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useNavigate } from "react-router-dom";
@@ -39,7 +40,7 @@ const Home = ({ setIsHome }: HomeProps) => {
     <>
       <PageLayout>
         <div className="mt-18 flex flex-col gap-14">
-          <div className="px-4 flex flex-col gap-7">
+          <div className="px-4 flex flex-col gap-7 sm:px-8 md:px-10">
             <section className="text-app-content">
               <h1 className="text-[22px] font-semibold mb-2">
                 Développeur Web et Mobile
@@ -53,28 +54,32 @@ const Home = ({ setIsHome }: HomeProps) => {
             <section>
               <ResumeView
                 triggerVariant="default"
-                triggerClassName="bg-app-content text-app-background h-10"
+                triggerClassName="bg-app-content text-app-background h-10 md:hidden"
+              />
+              <ResumeDialog
+                triggerVariant="default"
+                triggerClassName="bg-app-content text-app-background h-10 hidden md:inline-flex"
               />
             </section>
           </div>
-          <div className="px-4">
+          <div className="px-4 sm:px-14 md:px-20">
             <img
               src={screenA}
-              className="aspect-9/16 object-cover object-[8%] rounded-sm brightness-80 sepia-10"
+              className="aspect-9/16 object-cover object-[8%] rounded-sm brightness-80 sepia-10 md:aspect-3/2"
             />
           </div>
         </div>
-        <div className="mt-14 mb-4 flex flex-col gap-5">
-          <div className="px-4 text-app-content font-medium">
-            <p className="text-[18px]">
+        <div className="mt-14 mb-4 flex flex-col gap-5 sm:gap-8">
+          <div className="px-4 text-app-content font-medium sm:px-8">
+            <p className="text-[18px] vs:text-center">
               Développeur Full-Stack, voici les principales technologies que
               j'utilise
             </p>
           </div>
-          <section className="px-4 flex flex-col gap-6 vs:px-8 sm:px-12">
-            <div className="flex flex-col gap-4">
+          <section className="px-4 flex flex-col gap-6">
+            <div className="flex flex-col gap-4 vs:items-center">
               <h2 className="text-app-content/50 font-semibold">Front-end</h2>
-              <div className="flex justify-between">
+              <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
                 <Card className="gap-1 text-[18px] text-white font-extrabold bg-logo-background">
                   <FaReact className="text-l" /> React
                 </Card>
@@ -85,7 +90,7 @@ const Home = ({ setIsHome }: HomeProps) => {
                   <SiVite className="text-[16px]" /> Vite
                 </Card>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
                 <Card className="gap-1 text-[12px] text-white font-inter font-semibold bg-logo-background">
                   <RiTailwindCssFill className="text-[14px]" /> tailwindcss
                 </Card>
@@ -101,9 +106,9 @@ const Home = ({ setIsHome }: HomeProps) => {
                 </Card>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 vs:items-center">
               <h2 className="text-app-content/50 font-semibold">Back-end</h2>
-              <div className="flex justify-between">
+              <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
                 <Card className="bg-logo-background">
                   <img src={nodeLogo} className="w-14" />
                 </Card>
@@ -117,7 +122,7 @@ const Home = ({ setIsHome }: HomeProps) => {
             </div>
           </section>
         </div>
-        <div className="px-4 mt-6 mb-18">
+        <div className="px-4 mt-6 mb-18 flex vs:justify-center sm:mt-8">
           <Button
             variant="default"
             size="lg"

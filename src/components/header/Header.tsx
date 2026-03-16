@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="h-16 w-screen">
-      <div className="h-full flex p-4 justify-between items-center">
+      <div className="h-full flex p-4 justify-between items-center sm:px-8 md:px-10">
         <section
           className="text-app-content flex items-center gap-2.5 text-[18px] font-semibold hover:cursor-pointer"
           onClick={() => {
