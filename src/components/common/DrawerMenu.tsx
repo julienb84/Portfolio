@@ -56,7 +56,7 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
           className="hover:bg-hovercolor"
         >
           <LuMenu
-            className="text-2xl"
+            className="text-2xl sm:text-3xl"
             onClick={() => {
               setIsOpen(true);
             }}

@@ -38,18 +38,20 @@ const Home = ({ setIsHome }: HomeProps) => {
 
   return (
     <>
-      <PageLayout>
+      <PageLayout className="lg:wrapper1">
         <div className="mt-18 flex flex-col gap-14">
-          <div className="px-4 flex flex-col gap-7 sm:px-8 md:px-10">
+          <div className="px-4 flex flex-col gap-7 sm:px-8 md:px-10 lg:px-6">
             <section className="text-app-content">
-              <h1 className="text-[22px] font-semibold mb-2">
+              <h1 className="text-[22px] font-semibold mb-2 md:text-[26px]">
                 Développeur Web et Mobile
               </h1>
-              <p className="text-[18px] font-medium">
+              <p className="text-[18px] font-medium sm:text-justify md:text-[22px]">
                 Ingénieur du son expérimenté, j’ai choisi d’orienter ma carrière
                 vers le secteur du numérique.
               </p>
-              <p className="text-[18px] font-medium">Bienvenue sur mon site.</p>
+              <p className="text-[18px] font-medium md:text-[22px]">
+                Bienvenue sur mon site.
+              </p>
             </section>
             <section>
               <ResumeView
@@ -62,7 +64,7 @@ const Home = ({ setIsHome }: HomeProps) => {
               />
             </section>
           </div>
-          <div className="px-4 sm:px-14 md:px-20">
+          <div className="px-4 sm:px-14 md:flex md:justify-center">
             <img
               src={screenA}
               className="aspect-9/16 object-cover object-[8%] rounded-sm brightness-80 sepia-10 md:aspect-3/2"
@@ -71,14 +73,16 @@ const Home = ({ setIsHome }: HomeProps) => {
         </div>
         <div className="mt-14 mb-4 flex flex-col gap-5 sm:gap-8">
           <div className="px-4 text-app-content font-medium sm:px-8">
-            <p className="text-[18px] vs:text-center">
+            <p className="text-[18px] vs:text-center md:text-[20px]">
               Développeur Full-Stack, voici les principales technologies que
               j'utilise
             </p>
           </div>
           <section className="px-4 flex flex-col gap-6">
             <div className="flex flex-col gap-4 vs:items-center">
-              <h2 className="text-app-content/50 font-semibold">Front-end</h2>
+              <h2 className="text-app-content/50 font-semibold md:text-[20px]">
+                Front-end
+              </h2>
               <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
                 <Card className="gap-1 text-[18px] text-white font-extrabold bg-logo-background">
                   <FaReact className="text-l" /> React
@@ -107,7 +111,9 @@ const Home = ({ setIsHome }: HomeProps) => {
               </div>
             </div>
             <div className="flex flex-col gap-4 vs:items-center">
-              <h2 className="text-app-content/50 font-semibold">Back-end</h2>
+              <h2 className="text-app-content/50 font-semibold md:text-[20px]">
+                Back-end
+              </h2>
               <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
                 <Card className="bg-logo-background">
                   <img src={nodeLogo} className="w-14" />
