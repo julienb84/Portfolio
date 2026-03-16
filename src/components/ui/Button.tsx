@@ -1,6 +1,6 @@
 "use client";
 
-// FRAMEWORK COMPONENTS & HOOKS //
+// FRAMEWORKS COMPONENTS & HOOKS //
 import { twMerge } from "tailwind-merge";
 
 // UI //
@@ -15,6 +15,7 @@ function Button({
   variant:
     | "default"
     | "outline"
+    | "outline2"
     | "secondary"
     | "ghost"
     | "destructive"
@@ -27,13 +28,16 @@ function Button({
     | "icon"
     | "icon-xs"
     | "icon-sm"
-    | "icon-lg";
+    | "icon-lg"
+    | "icon-xl";
 }) {
   // Variant Classes
   const variantClasses = {
     default: "bg-app-background text-app-content hover:bg-hover",
     outline:
       "border-border text-secondary-foreground/70 bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/70 aria-expanded:bg-muted aria-expanded:text-foreground",
+    outline2:
+      "border-border text-secondary-foreground/70 bg-background dark:bg-input/30 dark:border-input aria-expanded:bg-muted aria-expanded:text-foreground",
     secondary:
       "bg-secondary text-secondary-foreground hover:bg-secondary/70 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
     ghost:
@@ -55,6 +59,7 @@ function Button({
     "icon-sm":
       "size-7 rounded-[min(var(--radius-sm),12px)] in-data-[slot=button-group]:rounded-sm",
     "icon-lg": "size-9",
+    "icon-xl": "size-10",
   };
 
   return (

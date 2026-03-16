@@ -1,3 +1,6 @@
+// COMPONENTS //
+import { useTheme } from "../../context/ThemeContext";
+
 // UI //
 import Button from "../ui/Button";
 import { ButtonGroup, ButtonGroupSeparator } from "../ui/ButtonGroup";
@@ -6,9 +9,11 @@ import { IoIosMoon } from "react-icons/io";
 import { HiSun } from "react-icons/hi2";
 
 const Footer = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <div className="min-h-32 w-screen bg-footer-background pt-2 flex gap-12">
-      <div className="px-4 flex flex-col gap-3">
+    <div className="min-h-32 w-screen bg-footer-background pt-2 flex justify-center gap-20">
+      <div className="flex flex-col gap-5">
         <section className="flex flex-col gap-1 text-[14px]">
           <p className="text-primary/60">Connect</p>
           <a
@@ -30,16 +35,35 @@ const Footer = () => {
       </div>
       <div>
         <ButtonGroup orientation="horizontal">
-          <Button variant="default" size="sm">
-            <GrSystem />
+          <Button
+            variant={theme === "system" ? "outline2" : "default"}
+            size="icon-xl"
+            onClick={() => {
+              setTheme("system");
+            }}
+            className={
+              theme === "system" ? "hover:none" : "hover:bg-hovercolor"
+            }
+          >
+            <GrSystem className="text-[20px]" />
           </Button>
           <ButtonGroupSeparator />
-          <Button variant="default" size="sm">
-            <IoIosMoon />
+          <Button
+            variant={theme === "dark" ? "outline2" : "default"}
+            size="icon-xl"
+            onClick={() => setTheme("dark")}
+            className={theme === "dark" ? "hover:none" : "hover:bg-hovercolor"}
+          >
+            <IoIosMoon className="text-[20px]" />
           </Button>
           <ButtonGroupSeparator />
-          <Button variant="default" size="sm">
-            <HiSun />
+          <Button
+            variant={theme === "light" ? "outline2" : "default"}
+            size="icon-xl"
+            onClick={() => setTheme("light")}
+            className={theme === "light" ? "hover:none" : "hover:bg-hovercolor"}
+          >
+            <HiSun className="text-[20px]" />
           </Button>
         </ButtonGroup>
       </div>
