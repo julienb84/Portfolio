@@ -39,7 +39,7 @@ const Home = ({ setIsHome }: HomeProps) => {
   return (
     <>
       <PageLayout className="lg:wrapper1">
-        <div className="mt-18 flex flex-col gap-14">
+        <div className="flex flex-col gap-14">
           <div className="px-4 flex flex-col gap-7 sm:px-8 md:px-10 lg:px-6">
             <section className="text-app-content">
               <h1 className="text-[22px] font-semibold mb-2 md:text-[26px]">
@@ -128,7 +128,7 @@ const Home = ({ setIsHome }: HomeProps) => {
             </div>
           </section>
         </div>
-        <div className="px-4 mt-6 mb-18 flex vs:justify-center sm:mt-8">
+        <div className="px-4 mt-6 flex vs:justify-center sm:mt-8">
           <Button
             variant="default"
             size="lg"

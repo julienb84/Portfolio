@@ -1,6 +1,7 @@
 // PAGES //
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
+import CatchAll from "./Pages/CatchAll";
 
 // COMPONENTS //
 import Header from "./components/header/Header";
@@ -23,6 +24,7 @@ function App() {
             path="/projects"
             element={<Projects setIsHome={setIsHome} />}
           />
+          <Route path="/*" element={<CatchAll setIsHome={setIsHome} />} />
         </Routes>
         <Footer />
       </Router>
