@@ -42,7 +42,9 @@ const Footer = () => {
               setTheme("system");
             }}
             className={
-              theme === "system" ? "hover:none" : "hover:bg-hovercolor"
+              theme === "system"
+                ? "hover:none"
+                : "hover:bg-hovercolor hover:cursor-default"
             }
           >
             <GrSystem className="text-[20px]" />
