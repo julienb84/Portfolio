@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Marvel Mirror",
+    "projectType": "Projet Full-Stack",
+    "description": "Ce projet est une application web fonctionnelle inspirée du site Marvel, réalisé en autonomie pendant ma formation de développeur.",
+    "framework": "React",
+    "router": "React Router",
+    "cssTools": "SCSS",
+    "webURL": "https://dazzling-semolina-57133c.netlify.app",
+    "coverSecureURL": "https://res.cloudinary.com/dldc2n70y/image/upload/v1773754596/Screen_marv_charac_sexucg.png",
+    "githubURL": "https://github.com/julienb84/test-marvel-frontend",
+    "creationDate": 2025
+  }
+]
