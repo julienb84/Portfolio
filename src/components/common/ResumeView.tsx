@@ -17,7 +17,7 @@ import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
 import { ImProfile } from "react-icons/im";
 import { IoArrowDownOutline } from "react-icons/io5";
 
-interface ResumeViewProps {
+type ResumeViewProps = {
   direction?: "top" | "left" | "right";
   triggerVariant?:
     | "default"
@@ -36,14 +36,14 @@ interface ResumeViewProps {
     | "icon-sm"
     | "icon-lg";
   triggerClassName?: string;
-}
+};
 
-const ResumeView: React.FC<ResumeViewProps> = ({
+const ResumeView = ({
   direction,
   triggerVariant,
   triggerSize,
   triggerClassName,
-}) => {
+}: ResumeViewProps) => {
   const handleClick = () => {
     const link = document.createElement("a");
     link.href = cvToDownload;

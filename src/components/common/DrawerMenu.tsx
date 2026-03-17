@@ -15,7 +15,7 @@ import { MdClose } from "react-icons/md";
 import { LuMenu } from "react-icons/lu";
 import Button from "../ui/Button";
 
-interface DrawerMenuProps {
+type DrawerMenuProps = {
   direction?: "top" | "left" | "right";
   triggerVariant?:
     | "default"
@@ -36,25 +36,21 @@ interface DrawerMenuProps {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isHome: boolean;
-}
+};
 
-const DrawerMenu: React.FC<DrawerMenuProps> = ({
+const DrawerMenu = ({
   direction,
   triggerVariant,
   triggerSize,
   isOpen,
   setIsOpen,
   isHome,
-}) => {
+}: DrawerMenuProps) => {
   const navigate = useNavigate();
   return (
     <>
       <Drawer direction={direction} open={isOpen}>
-        <DrawerTrigger
-          variant={triggerVariant}
-          size={triggerSize}
-          className="hover:bg-hovercolor"
-        >
+        <DrawerTrigger variant={triggerVariant} size={triggerSize}>
           <LuMenu
             className="text-2xl sm:text-3xl"
             onClick={() => {

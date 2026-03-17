@@ -16,7 +16,7 @@ import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
 import { ImProfile } from "react-icons/im";
 import { IoArrowDownOutline } from "react-icons/io5";
 
-interface ResumeDialogProps {
+type ResumeDialogProps = {
   triggerVariant?:
     | "default"
     | "outline"
@@ -34,13 +34,13 @@ interface ResumeDialogProps {
     | "icon-sm"
     | "icon-lg";
   triggerClassName?: string;
-}
+};
 
-const ResumeDialog: React.FC<ResumeDialogProps> = ({
+const ResumeDialog = ({
   triggerVariant,
   triggerSize,
   triggerClassName,
-}) => {
+}: ResumeDialogProps) => {
   const handleClick = () => {
     const link = document.createElement("a");
     link.href = cvToDownload;

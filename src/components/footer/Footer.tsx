@@ -52,7 +52,11 @@ const Footer = () => {
             variant={theme === "dark" ? "outline2" : "default"}
             size="icon-xl"
             onClick={() => setTheme("dark")}
-            className={theme === "dark" ? "hover:none" : "hover:bg-hovercolor"}
+            className={
+              theme === "dark"
+                ? "hover:none"
+                : "hover:bg-hovercolor hover:cursor-default"
+            }
           >
             <IoIosMoon className="text-[20px]" />
           </Button>
@@ -61,7 +65,11 @@ const Footer = () => {
             variant={theme === "light" ? "outline2" : "default"}
             size="icon-xl"
             onClick={() => setTheme("light")}
-            className={theme === "light" ? "hover:none" : "hover:bg-hovercolor"}
+            className={
+              theme === "light"
+                ? "hover:none"
+                : "hover:bg-hovercolor hover:cursor-default"
+            }
           >
             <HiSun className="text-[20px]" />
           </Button>
