@@ -39,7 +39,7 @@ const Home = ({ setIsHome }: HomeProps) => {
   return (
     <>
       <PageLayout>
-        <div className="mt-26 md:mt-32 lg:mt-32 lg:wrapper1">
+        <div className="mt-22 md:mt-28 lg:mt-28 lg:wrapper1">
           <div className="flex flex-col gap-14">
             <div className="px-4 flex flex-col gap-7 sm:px-8 md:px-10 lg:px-4">
               <section className="text-app-content">

@@ -25,7 +25,7 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
 
   return (
     <PageLayout>
-      <div className="w-full mt-26 md:mt-32 lg:mt-32 lg:wrapper1">
+      <div className="w-full mt-22 md:mt-28 lg:mt-28 lg:wrapper1">
         <ProjectsLayout projectsTab={projectsTab} />
       </div>
     </PageLayout>
