@@ -18,15 +18,15 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="h-16 w-screen lg:wrapper1">
-      <div className="h-full flex p-4 justify-between items-center sm:px-8 md:px-10 lg:px-6">
+    <div className="h-16 w-screen fixed bg-app-background z-50">
+      <div className="h-full flex p-4 justify-between items-center sm:px-8 md:px-10 lg:px-2 lg:wrapper1">
         <section
           className="text-app-content flex items-center gap-2.5 text-[18px] font-semibold hover:cursor-pointer sm:text-[24px]"
           onClick={() => {
             navigate("/");
           }}
         >
-          <img src={logo} className="h-6 z-1000 sm:h-8" />
+          <img src={logo} className="h-6 sm:h-8" />
           <span>Julien Bouchez</span>
         </section>
         <DrawerMenu

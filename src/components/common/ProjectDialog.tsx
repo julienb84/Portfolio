@@ -1,4 +1,12 @@
 // UI //
+import Dialog from "../ui/dialog/dialogComponents/Dialog";
+import DialogTrigger from "../ui/dialog/dialogComponents/DialogTrigger";
+import DialogContent from "../ui/dialog/dialogLayout/DialogContent";
+import DialogHeader from "../ui/dialog/dialogLayout/DialogHeader";
+import DialogDescription from "../ui/dialog/dialogContent/DialogDescription";
+import DialogTitle from "../ui/dialog/dialogContent/DialogTitle";
+import DialogFooter from "../ui/dialog/dialogLayout/DialogFooter";
+import Button from "../ui/Button";
 import {
   Card,
   CardHeader,
@@ -9,15 +17,6 @@ import {
   CardContent,
 } from "../ui/Card";
 import { Badge } from "../ui/Badge";
-import Button from "../ui/Button";
-import Drawer from "../ui/drawer/drawerComponents/Drawer";
-import DrawerClose from "../ui/drawer/drawerComponents/DrawerClose";
-import DrawerContent from "../ui/drawer/drawerLayout/DrawerContent";
-import DrawerDescription from "../ui/drawer/drawerContent/DrawerDescription";
-import DrawerFooter from "../ui/drawer/drawerLayout/DrawerFooter";
-import DrawerHeader from "../ui/drawer/drawerLayout/DrawerHeader";
-import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
-import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 import { IoArrowForward } from "react-icons/io5";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
@@ -26,29 +25,29 @@ import { twMerge } from "tailwind-merge";
 // TYPES //
 import type { Project } from "../../types/project";
 
-interface ProjectViewProps {
+interface ProjectDialogProps {
   project: Project;
   triggerClassName?: string;
 }
 
-const ProjectView = ({ project, triggerClassName }: ProjectViewProps) => {
+const ProjectDialog = ({ project, triggerClassName }: ProjectDialogProps) => {
   return (
     <div>
-      <Drawer>
-        <DrawerTrigger
+      <Dialog>
+        <DialogTrigger
           variant="default"
           size="lg"
           className={twMerge(
-            `bg-app-content text-app-background w-60 md:w-52 font-semibold ${triggerClassName}`,
+            `bg-app-content text-app-background w-60 md:w-52 font-semibold hidden ${triggerClassName}`,
           )}
         >
           Aperçu
-        </DrawerTrigger>
-        <DrawerContent className="data-[vaul-drawer-direction=bottom]:border-transparent">
-          <DrawerHeader className="pb-0">
-            <DrawerTitle></DrawerTitle>
-            <DrawerDescription></DrawerDescription>
-          </DrawerHeader>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle></DialogTitle>
+            <DialogDescription></DialogDescription>
+          </DialogHeader>
           <Card className="relative mx-auto w-full max-w-sm pt-0 rounded-sm">
             <div className="absolute inset-0 z-30 aspect-video bg-black/8 dark:bg-black/15" />
             <img
@@ -103,13 +102,11 @@ const ProjectView = ({ project, triggerClassName }: ProjectViewProps) => {
               </Button>
             </CardFooter>
           </Card>
-          <DrawerFooter className="pb-10 xs:pb-5">
-            <DrawerClose className="w-2xs xs:w-90">Close</DrawerClose>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
+          <DialogFooter></DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
 
-export default ProjectView;
+export default ProjectDialog;

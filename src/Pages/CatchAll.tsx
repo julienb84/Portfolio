@@ -24,26 +24,30 @@ const CatchAll = ({ setIsHome }: CatchAllProps) => {
   }, []);
 
   return (
-    <PageLayout className="min-h-[calc(100vh-194px)] items-center gap-10">
-      <div className="text-app-content text-4xl md:text-6xl flex flex-col items-center font-medium">
-        <h1>ERROR</h1>
-        <TbError404 className="text-6xl md:text-9xl" />
+    <PageLayout className="items-center gap-10">
+      <div className="mt-12 md:mt-16 full lg:wrapper1">
+        <div className="text-app-content text-4xl md:text-6xl flex flex-col items-center font-medium">
+          <h1>ERROR</h1>
+          <TbError404 className="text-6xl md:text-9xl" />
+        </div>
+        <div className="text-app-content px-4 md:text-2xl flex flex-col items-center gap-2 md:gap-4">
+          <p>La page que vous cherchez n'existe pas...</p>
+          <FaRegFaceSurprise className="text-[20px] md:text-3xl" />
+        </div>
+        <div className="flex justify-center mt-6 md:mt-8">
+          <Button
+            variant="default"
+            size="lg"
+            className="bg-app-content text-app-background h-10"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Back Home
+            <IoArrowForward />
+          </Button>
+        </div>
       </div>
-      <div className="text-app-content px-4 md:text-2xl flex flex-col items-center gap-2 md:gap-4">
-        <p>La page que vous cherchez n'existe pas...</p>
-        <FaRegFaceSurprise className="text-[20px] md:text-3xl" />
-      </div>
-      <Button
-        variant="default"
-        size="lg"
-        className="bg-app-content text-app-background h-10"
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Back Home
-        <IoArrowForward />
-      </Button>
     </PageLayout>
   );
 };

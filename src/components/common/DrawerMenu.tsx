@@ -58,7 +58,7 @@ const DrawerMenu = ({
             }}
           />
         </DrawerTrigger>
-        <DrawerContent className="data-[vaul-drawer-direction=right]:border-transparent">
+        <DrawerContent className="data-[vaul-drawer-direction=right]:border-transparent z-2000">
           <DrawerHeader className="items-end pr-3">
             <DrawerClose variant="default" size="icon" className="inline-flex">
               <MdClose

@@ -1,9 +1,9 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
-import ProjectsLayout from "../components/projectsLayout/projectsLayout";
+import ProjectsLayout from "../components/projectsLayout/ProjectsLayout";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // DATA //
 import projectsData from "../data/projectsData.json";
@@ -16,9 +16,6 @@ type ProjectsProps = {
 };
 
 const Projects = ({ setIsHome }: ProjectsProps) => {
-  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
-  const [dialogIsOpen, setDialogIsOpen] = useState(false);
-
   const projectsTab = projectsData as Project[];
 
   useEffect(() => {
@@ -28,13 +25,9 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
 
   return (
     <PageLayout>
-      <ProjectsLayout
-        projectsTab={projectsTab}
-        drawerIsOpen={drawerIsOpen}
-        setDrawerIsOpen={setDrawerIsOpen}
-        dialogIsOpen={dialogIsOpen}
-        setDialogIsOpen={setDialogIsOpen}
-      />
+      <div className="w-full mt-12 md:mt-16 lg:wrapper1">
+        <ProjectsLayout projectsTab={projectsTab} />
+      </div>
     </PageLayout>
   );
 };

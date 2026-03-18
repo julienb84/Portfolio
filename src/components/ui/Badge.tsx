@@ -1,5 +1,5 @@
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { Children, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface BadgeProps {
