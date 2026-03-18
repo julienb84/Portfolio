@@ -16,6 +16,7 @@
   --app-content: oklch(0.145 0 0);
   --hovercolor: oklch(79.369% 0.00223 14.975);
   --footer-background: oklch(79.369% 0.00223 14.975);
+  --success: #11d566;
 
   /* shadCN Variables */
   --background: oklch(1 0 0);
@@ -57,6 +58,7 @@
   --app-content: oklch(0.985 0 0);
   --hovercolor: #363535;
   --footer-background: #202020;
+  --success: #2af080;
 
   /* shadCN variables */
   --background: oklch(0.145 0 0);
@@ -102,6 +104,7 @@
   --color-hovercolor: var(--hovercolor);
   --color-logo-background: oklch(0.205 0 0);
   --color-footer-background: var(--footer-background);
+  --color-success: var(--success);
 
   --color-brand-25: #fffbfd;
   --color-brand-50: #fef5f8;
@@ -114,28 +117,6 @@
   --color-brand-700: #a80e32;
   --color-brand-800: #8a0323;
   --color-brand-900: #680018;
-
-  --color-success-25: #edfff5;
-  --color-success-50: #c2ffdc;
-  --color-success-100: #94ffc3;
-  --color-success-200: #52ff9d;
-  --color-success-300: #36ee85;
-  --color-success-400: #3ac376;
-  --color-success-500: #2e8b57;
-  --color-success-600: #267749;
-  --color-success-700: #24613e;
-  --color-success-800: #224b34;
-  --color-success-900: #1e3a2a;
-
-  --color-error-100: #f3e2e4;
-  --color-error-200: #eeb1b9;
-  --color-error-300: #e78794;
-  --color-error-400: #f1233f;
-  --color-error-500: #dc142f;
-  --color-error-600: #c60b24;
-  --color-error-700: #a8041a;
-  --color-error-700: #770212;
-  --color-error-700: #4b010b;
 
   --breakpoint-xxs: 22rem;
   --breakpoint-xs: 24rem;

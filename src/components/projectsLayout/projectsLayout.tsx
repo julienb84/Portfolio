@@ -21,7 +21,7 @@ const ProjectsLayout = ({
 }: ProjectsLayoutProps) => {
   return (
     <div className="px-4 flex flex-col text-app-content font-medium">
-      <section>
+      <section className="flex flex-col gap-6">
         <p className="text-[18px]">Projets d'études</p>
         <ProjectView projectsTab={projectsTab} />
       </section>

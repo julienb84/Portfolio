@@ -1,8 +1,8 @@
 [
   {
     "title": "Marvel Mirror",
-    "projectType": "Projet Full-Stack",
-    "description": "Ce projet est une application web fonctionnelle inspirée du site Marvel, réalisé en autonomie pendant ma formation de développeur.",
+    "projectType": "Full-Stack",
+    "description": "Application web inspirée du site Marvel et réalisée en autonomie pendant ma formation de développeur.",
     "framework": "React",
     "router": "React Router",
     "cssTools": "SCSS",
