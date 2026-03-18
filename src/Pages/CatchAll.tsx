@@ -25,7 +25,7 @@ const CatchAll = ({ setIsHome }: CatchAllProps) => {
 
   return (
     <PageLayout className="items-center gap-10">
-      <div className="mt-12 md:mt-16 full lg:wrapper1">
+      <div className="mt-26 md:mt-32 lg:mt-32 lg:wrapper1">
         <div className="text-app-content text-4xl md:text-6xl flex flex-col items-center font-medium">
           <h1>ERROR</h1>
           <TbError404 className="text-6xl md:text-9xl" />
