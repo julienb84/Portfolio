@@ -1,7 +1,7 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
 import ResumeView from "../components/common/ResumeView";
-import Card from "../components/ui/Card";
+import CardBasic from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import ResumeDialog from "../components/common/ResumeDialog";
 
@@ -84,30 +84,30 @@ const Home = ({ setIsHome }: HomeProps) => {
                 Front-end
               </h2>
               <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
-                <Card className="gap-1 text-[18px] text-white font-extrabold bg-logo-background">
+                <CardBasic className="gap-1 text-[18px] text-white font-extrabold bg-logo-background">
                   <FaReact className="text-l" /> React
-                </Card>
-                <Card className="bg-logo-background">
+                </CardBasic>
+                <CardBasic className="bg-logo-background">
                   <img src={routerLogo} className="w-20" />
-                </Card>
-                <Card className="gap-1 text-[18px] text-white font-extrabold bg-logo-background">
+                </CardBasic>
+                <CardBasic className="gap-1 text-[18px] text-white font-extrabold bg-logo-background">
                   <SiVite className="text-[16px]" /> Vite
-                </Card>
+                </CardBasic>
               </div>
               <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
-                <Card className="gap-1 text-[12px] text-white font-inter font-semibold bg-logo-background">
+                <CardBasic className="gap-1 text-[12px] text-white font-inter font-semibold bg-logo-background">
                   <RiTailwindCssFill className="text-[14px]" /> tailwindcss
-                </Card>
-                <Card className="gap-1.5 text-[14px] text-white font-montserrat font-bold bg-logo-background">
+                </CardBasic>
+                <CardBasic className="gap-1.5 text-[14px] text-white font-montserrat font-bold bg-logo-background">
                   <span>A</span>
                   <span>X</span>
                   <SiAxios className="text-[10px]" />
                   <span>O</span>
                   <span>S</span>
-                </Card>
-                <Card className="bg-logo-background">
+                </CardBasic>
+                <CardBasic className="bg-logo-background">
                   <img src={stripeLogo} className="w-14" />
-                </Card>
+                </CardBasic>
               </div>
             </div>
             <div className="flex flex-col gap-4 vs:items-center">
@@ -115,15 +115,15 @@ const Home = ({ setIsHome }: HomeProps) => {
                 Back-end
               </h2>
               <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
-                <Card className="bg-logo-background">
+                <CardBasic className="bg-logo-background">
                   <img src={nodeLogo} className="w-14" />
-                </Card>
-                <Card className="gap-1 text-[12px] text-white font-medium bg-logo-background">
+                </CardBasic>
+                <CardBasic className="gap-1 text-[12px] text-white font-medium bg-logo-background">
                   <SiExpress className="text-lg" /> express.js
-                </Card>
-                <Card className="bg-logo-background">
+                </CardBasic>
+                <CardBasic className="bg-logo-background">
                   <img src={mongoLogo} className="w-18" />
-                </Card>
+                </CardBasic>
               </div>
             </div>
           </section>
