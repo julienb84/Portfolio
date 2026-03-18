@@ -20,8 +20,6 @@ const CardBasic = ({ children, className }: CardProps) => {
   );
 };
 
-export default CardBasic;
-
 function Card({
   className,
   size = "default",
@@ -109,6 +107,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 export {
+  CardBasic,
   Card,
   CardHeader,
   CardFooter,

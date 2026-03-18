@@ -1,12 +1,29 @@
+// UI //
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+} from "../ui/Card";
+
 // TYPES //
 import type { Project } from "../../types/project";
 
-type ProjectViewProps = { projectsTab: Project[] };
+interface ProjectViewProps {
+  projectsTab: Project[];
+}
 
 const ProjectView = ({ projectsTab }: ProjectViewProps) => {
-  const tab = projectsTab;
-
-  return <div></div>;
+  return (
+    <div>
+      {projectsTab.map((project) => {
+        return <></>;
+      })}
+    </div>
+  );
 };
 
 export default ProjectView;

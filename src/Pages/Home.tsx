@@ -1,7 +1,7 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
 import ResumeView from "../components/common/ResumeView";
-import CardBasic from "../components/ui/Card";
+import { CardBasic } from "../components/ui/Card";
 import Button from "../components/ui/Button";
 import ResumeDialog from "../components/common/ResumeDialog";
 

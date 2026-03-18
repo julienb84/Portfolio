@@ -1,3 +1,6 @@
+// COMPONENTS //
+import ProjectView from "../common/ProjectView";
+
 // TYPES //
 import type { Project } from "../../types/project";
 
@@ -20,7 +23,7 @@ const ProjectsLayout = ({
     <div className="px-4 flex flex-col text-app-content font-medium">
       <section>
         <p className="text-[18px]">Projets d'études</p>
-        <div></div>
+        <ProjectView projectsTab={projectsTab} />
       </section>
     </div>
   );

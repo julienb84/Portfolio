@@ -9,4 +9,5 @@ export type Project = {
   coverSecureURL?: string;
   githubURL?: string;
   creationDate: number;
+  id: string;
 };
