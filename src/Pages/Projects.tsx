@@ -1,6 +1,6 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
-import PageWrapper from "../components/pageWrapper/pageWrapper";
+import PageWrapper from "../components/pageWrapper/PageWrapper";
 import ProjectsLayout from "../components/projectsLayout/ProjectsLayout";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
