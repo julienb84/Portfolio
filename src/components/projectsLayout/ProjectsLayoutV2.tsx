@@ -6,11 +6,11 @@ import ProjectDialog from "../common/ProjectDialog";
 import type { Project } from "../../types/project";
 import { Card, CardFooter } from "../ui/Card";
 
-type ProjectsLayoutProps = {
+type ProjectsLayoutV2Props = {
   projectsTab: Project[];
 };
 
-const ProjectsLayout = ({ projectsTab }: ProjectsLayoutProps) => {
+const ProjectsLayoutV2 = ({ projectsTab }: ProjectsLayoutV2Props) => {
   return (
     <div className="px-4 flex flex-col text-app-content font-medium sm:px-8 md:px-10 lg:px-4">
       <section className="flex flex-col gap-8">
@@ -55,4 +55,4 @@ const ProjectsLayout = ({ projectsTab }: ProjectsLayoutProps) => {
   );
 };
 
-export default ProjectsLayout;
+export default ProjectsLayoutV2;

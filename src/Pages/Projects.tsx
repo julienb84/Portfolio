@@ -1,7 +1,7 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
-import ProjectsLayout from "../components/projectsLayout/ProjectsLayout";
-import PageWrapper from "../components/pageWrapper/PageWrapper";
+import PageWrapperV2 from "../components/pageWrapper/PageWrapperV2";
+import ProjectsLayoutV2 from "../components/projectsLayout/ProjectsLayoutV2";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
@@ -26,9 +26,9 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
 
   return (
     <PageLayout>
-      <PageWrapper className="w-full">
-        <ProjectsLayout projectsTab={projectsTab} />
-      </PageWrapper>
+      <PageWrapperV2 className="w-full">
+        <ProjectsLayoutV2 projectsTab={projectsTab} />
+      </PageWrapperV2>
     </PageLayout>
   );
 };

@@ -1,7 +1,7 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
 import HomeContent from "../components/home/HomeContent";
-import PageWrapper from "../components/pageWrapper/PageWrapper";
+import PageWrapperV2 from "../components/pageWrapper/PageWrapperV2";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
@@ -19,9 +19,9 @@ const Home = ({ setIsHome }: HomeProps) => {
   return (
     <>
       <PageLayout>
-        <PageWrapper>
+        <PageWrapperV2>
           <HomeContent />
-        </PageWrapper>
+        </PageWrapperV2>
       </PageLayout>
     </>
   );
