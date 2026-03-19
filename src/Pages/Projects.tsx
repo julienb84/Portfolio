@@ -1,7 +1,7 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
-import PageWrapper from "../components/pageWrapper/PageWrapper";
 import ProjectsLayout from "../components/projectsLayout/ProjectsLayout";
+import PageWrapper from "../components/pageWrapper/PageWrapper";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
