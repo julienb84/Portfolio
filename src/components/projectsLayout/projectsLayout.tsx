@@ -15,9 +15,9 @@ const ProjectsLayout = ({ projectsTab }: ProjectsLayoutProps) => {
     <div className="px-4 flex flex-col text-app-content font-medium sm:px-8 md:px-10 lg:px-4">
       <section className="flex flex-col gap-8">
         <p className="text-[22px] font-semibold mb-2 md:text-[26px]">
-          Projets d'études
+          Projets de formation
         </p>
-        <div className="flex flex-col vs:px-4 sm:px-6 md:inline-flex md:px-0">
+        <div className="flex flex-col vs:px-4 sm:px-6 md:inline-flex md:px-3">
           {projectsTab.map((project) => {
             return (
               <div
@@ -42,7 +42,7 @@ const ProjectsLayout = ({ projectsTab }: ProjectsLayoutProps) => {
                     />
                     <ProjectDialog
                       project={project}
-                      triggerClassName="md:inline-flex"
+                      triggerClassName="md:inline-flex md:hover:bg-app-content/80"
                     />
                   </CardFooter>
                 </Card>

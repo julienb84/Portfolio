@@ -28,16 +28,16 @@ const HomeContent = () => {
   return (
     <>
       <div className="flex flex-col gap-14">
-        <div className="px-4 flex flex-col gap-7 sm:px-8 md:px-10 lg:px-4">
+        <div className="px-4 flex flex-col gap-5 sm:px-8 md:px-10 lg:px-4">
           <section className="text-app-content">
             <h1 className="text-[22px] font-semibold mb-2 md:text-[26px]">
               Développeur Web et Mobile
             </h1>
-            <p className="text-[18px] font-medium sm:text-justify md:text-[22px]">
+            <p className="text-[18px] font-medium tracking-wide sm:text-justify md:text-[22px]">
               Ingénieur du son expérimenté, j’ai choisi d’orienter ma carrière
               vers le secteur du numérique.
             </p>
-            <p className="text-[18px] font-medium md:text-[22px]">
+            <p className="text-[18px] font-medium tracking-wide md:text-[22px]">
               Bienvenue sur mon site.
             </p>
           </section>
@@ -48,7 +48,7 @@ const HomeContent = () => {
             />
             <ResumeDialog
               triggerVariant="default"
-              triggerClassName="bg-app-content text-app-background h-10 hidden md:inline-flex"
+              triggerClassName="bg-app-content text-app-background h-10 hidden md:inline-flex md:hover:bg-app-content/80"
             />
           </section>
         </div>
@@ -61,14 +61,14 @@ const HomeContent = () => {
       </div>
       <div className="mt-14 mb-4 flex flex-col gap-5 sm:gap-8">
         <div className="px-4 text-app-content font-medium sm:px-8">
-          <p className="text-[18px] vs:text-center md:text-[20px]">
+          <p className="text-[18px] tracking-wide vs:text-center md:text-[20px]">
             Développeur Full-Stack, voici les principales technologies que
             j'utilise
           </p>
         </div>
         <section className="px-4 flex flex-col gap-6">
           <div className="flex flex-col gap-4 vs:items-center">
-            <h2 className="text-app-content/50 font-semibold md:text-[20px]">
+            <h2 className="text-app-content/50 font-semibold tracking-wide md:text-[20px]">
               Front-end
             </h2>
             <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
@@ -99,7 +99,7 @@ const HomeContent = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4 vs:items-center">
-            <h2 className="text-app-content/50 font-semibold md:text-[20px]">
+            <h2 className="text-app-content/50 font-semibold tracking-wide md:text-[20px]">
               Back-end
             </h2>
             <div className="flex justify-between xs:justify-center xs:gap-4 vs:gap-12">
@@ -120,7 +120,7 @@ const HomeContent = () => {
         <Button
           variant="default"
           size="lg"
-          className="bg-app-content text-app-background h-10"
+          className="bg-app-content text-app-background h-10 hover:bg-app-content/80"
           onClick={() => {
             navigate("/projects");
           }}

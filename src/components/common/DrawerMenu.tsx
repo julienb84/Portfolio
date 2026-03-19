@@ -52,7 +52,7 @@ const DrawerMenu = ({
       <Drawer direction={direction} open={isOpen}>
         <DrawerTrigger variant={triggerVariant} size={triggerSize}>
           <LuMenu
-            className="text-2xl sm:text-3xl"
+            className="text-2xl sm:text-3xl hover:rotate-90 transition-all duration-300"
             onClick={() => {
               setIsOpen(true);
             }}
@@ -76,7 +76,7 @@ const DrawerMenu = ({
               <Button
                 variant="default"
                 size="lg"
-                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
+                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold hover:tracking-wide transition-all duration-300"
                 onClick={() => {
                   navigate("/projects");
                   setIsOpen(false);
@@ -88,7 +88,7 @@ const DrawerMenu = ({
               <Button
                 variant="default"
                 size="lg"
-                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold transition-all duration-300"
+                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold hover:tracking-wide transition-all duration-300"
                 onClick={() => {
                   navigate("/");
                   setIsOpen(false);
@@ -101,7 +101,7 @@ const DrawerMenu = ({
             <a
               href="https://github.com/julienb84"
               target="_blank"
-              className="text-[28px] italic font-medium px-3 hover:cursor-default hover:font-semibold transition-all duration-300"
+              className="text-[28px] italic font-medium px-3 hover:cursor-default hover:font-semibold hover:tracking-wide transition-all duration-300"
             >
               Profile GitHub
             </a>

@@ -7,7 +7,8 @@ export type Project = {
   cssTools: string;
   webURL?: string;
   coverSecureURL?: string;
+  previewSecureURL?: string;
   githubURL?: string;
-  creationDate: number;
+  creationDate?: number;
   id: string;
 };

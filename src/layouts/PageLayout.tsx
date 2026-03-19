@@ -11,7 +11,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, className }) => {
   return (
     <div
       className={twMerge(
-        `min-h-[calc(100vh-134px)] w-screen flex flex-col pt-18 pb-18 ${className}`,
+        `min-h-[calc(100vh-130px)] w-screen flex flex-col pt-18 pb-18 ${className}`,
       )}
     >
       {children}

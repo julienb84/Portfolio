@@ -6,7 +6,6 @@ import DialogHeader from "../ui/dialog/dialogLayout/DialogHeader";
 import DialogDescription from "../ui/dialog/dialogContent/DialogDescription";
 import DialogTitle from "../ui/dialog/dialogContent/DialogTitle";
 import DialogFooter from "../ui/dialog/dialogLayout/DialogFooter";
-import Button from "../ui/Button";
 import {
   Card,
   CardHeader,
@@ -51,7 +50,7 @@ const ProjectDialog = ({ project, triggerClassName }: ProjectDialogProps) => {
           <Card className="relative mx-auto w-full max-w-sm pt-0 rounded-sm">
             <div className="absolute inset-0 z-30 aspect-video bg-black/8 dark:bg-black/15" />
             <img
-              src={project.coverSecureURL}
+              src={project.previewSecureURL}
               alt="Project cover"
               className="relative z-20 aspect-video w-full object-cover object-top"
             />
@@ -81,25 +80,25 @@ const ProjectDialog = ({ project, triggerClassName }: ProjectDialogProps) => {
                 </Badge>
               </section>
             </CardContent>
-            <CardFooter className="flex-col justify-center gap-3">
+            <CardFooter className="justify-center gap-8">
               {project.webURL && (
-                <Button
-                  variant="outline2"
-                  size="lg"
-                  className="text-app-content"
+                <a
+                  href={project.webURL}
+                  target="_blank"
+                  className="w-36 border-2 border-border bg-app-background h-9 rounded-sm text-app-content font-medium inline-flex justify-center items-center gap-2 hover:cursor-default hover:bg-muted"
                 >
-                  <a href={project.webURL} target="_blank">
-                    Site Web
-                  </a>
+                  Site Web
                   <IoArrowForward />
-                </Button>
-              )}
-              <Button variant="outline2" size="lg" className="text-app-content">
-                <a href={project.githubURL} target="_blank">
-                  Repo GitHub
                 </a>
+              )}
+              <a
+                href={project.githubURL}
+                target="_blank"
+                className="w-36 border-2 border-border bg-app-background h-9 rounded-sm text-app-content font-medium inline-flex justify-center items-center gap-2 hover:cursor-default hover:bg-muted"
+              >
+                Repo GitHub
                 <IoArrowForward />
-              </Button>
+              </a>
             </CardFooter>
           </Card>
           <DialogFooter></DialogFooter>
