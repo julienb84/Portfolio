@@ -1,5 +1,6 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
+import PageWrapper from "../components/pageWrapper/pageWrapper";
 import ProjectsLayout from "../components/projectsLayout/ProjectsLayout";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
@@ -25,9 +26,9 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
 
   return (
     <PageLayout>
-      <div className="w-full mt-22 md:mt-28 lg:mt-28 lg:wrapper1">
+      <PageWrapper className="w-full">
         <ProjectsLayout projectsTab={projectsTab} />
-      </div>
+      </PageWrapper>
     </PageLayout>
   );
 };
