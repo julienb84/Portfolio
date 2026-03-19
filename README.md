@@ -7,6 +7,7 @@
 Voici mon site personnel que je vous invite à consulter à l'adresse suivante : .
 
 ![Capture d'écran 1 - Home page](./public/Screen-portfolio-home.png)
+![Capture d'écran 1 - Home page light](./public/Screen-portfolio-home-light.png)
 
 ---
 
