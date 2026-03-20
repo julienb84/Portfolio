@@ -8,7 +8,6 @@ import ResumeDialog from "../common/ResumeDialog";
 import { useNavigate } from "react-router-dom";
 
 // DATA //
-import screenA from "../../assets/Screen-VSC.svg";
 import routerLogo from "../../assets/brand/rr_lockup_dark.svg";
 import stripeLogo from "../../assets/brand/Stripe wordmark - White.svg";
 import nodeLogo from "../../assets/brand/nodejsStackedWhite.svg";
@@ -59,7 +58,7 @@ const HomeContent = () => {
           />
         </div>
       </div>
-      <div className="mt-14 mb-4 flex flex-col gap-5 sm:gap-8">
+      <div className="mt-18 mb-4 flex flex-col gap-5 sm:gap-8">
         <div className="px-4 text-app-content font-medium sm:px-8">
           <p className="text-[18px] tracking-wide vs:text-center md:text-[20px]">
             Développeur Full-Stack, voici les principales technologies que

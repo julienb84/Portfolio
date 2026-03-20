@@ -9,7 +9,6 @@ import DialogFooter from "../ui/dialog/dialogLayout/DialogFooter";
 import Button from "../ui/Button";
 
 // DATA //
-import cv from "../../assets/CV_dev_02-2026_SVG.svg";
 import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
 
 // UI //

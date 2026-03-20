@@ -99,6 +99,10 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-inter: "Inter", sans-serif;
 
+  --breakpoint-xxs: 22rem;
+  --breakpoint-xs: 24rem;
+  --breakpoint-vs: 30rem;
+
   --color-app-background: var(--app-background);
   --color-app-content: var(--app-content);
   --color-hovercolor: var(--hovercolor);
@@ -117,10 +121,6 @@
   --color-brand-700: #a80e32;
   --color-brand-800: #8a0323;
   --color-brand-900: #680018;
-
-  --breakpoint-xxs: 22rem;
-  --breakpoint-xs: 24rem;
-  --breakpoint-vs: 30rem;
 
   /* shadCN Themes */
   --font-sans: "Montserrat", sans-serif;

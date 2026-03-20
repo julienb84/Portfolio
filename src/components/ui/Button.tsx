@@ -8,11 +8,11 @@ import { Button as ButtonPrimitive } from "@base-ui/react/button";
 
 function Button({
   className,
-  variant,
-  size,
+  variant = "default",
+  size = "default",
   ...props
 }: ButtonPrimitive.Props & {
-  variant:
+  variant?:
     | "default"
     | "outline"
     | "outline2"
@@ -20,7 +20,7 @@ function Button({
     | "ghost"
     | "destructive"
     | "link";
-  size:
+  size?:
     | "default"
     | "xs"
     | "sm"
