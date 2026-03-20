@@ -8,7 +8,6 @@ import ResumeDialog from "../common/ResumeDialog";
 import { useNavigate } from "react-router-dom";
 
 // DATA //
-import screenA from "../../assets/Screen-VSC.svg";
 import routerLogo from "../../assets/brand/rr_lockup_dark.svg";
 import stripeLogo from "../../assets/brand/Stripe wordmark - White.svg";
 import nodeLogo from "../../assets/brand/nodejsStackedWhite.svg";
@@ -54,12 +53,12 @@ const HomeContent = () => {
         </div>
         <div className="px-4 sm:px-14 md:flex md:justify-center">
           <img
-            src={screenA}
+            src="https://res.cloudinary.com/dldc2n70y/image/upload/v1774005058/Screen-VSC_lioq5j.svg"
             className="aspect-9/16 object-cover object-[8%] rounded-sm brightness-80 sepia-10 md:aspect-3/2"
           />
         </div>
       </div>
-      <div className="mt-14 mb-4 flex flex-col gap-5 sm:gap-8">
+      <div className="mt-18 mb-4 flex flex-col gap-5 sm:gap-8">
         <div className="px-4 text-app-content font-medium sm:px-8">
           <p className="text-[18px] tracking-wide vs:text-center md:text-[20px]">
             Développeur Full-Stack, voici les principales technologies que

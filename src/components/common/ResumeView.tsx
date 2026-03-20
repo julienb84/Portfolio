@@ -10,7 +10,6 @@ import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 import Button from "../ui/Button";
 
 // DATA //
-import cv from "../../assets/CV_dev_02-2026_SVG.svg";
 import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
 
 // UI //
@@ -70,7 +69,11 @@ const ResumeView = ({
             <DrawerDescription></DrawerDescription>
           </DrawerHeader>
           <div className="flex justify-center">
-            <img src={cv} className="w-2xs xs:w-90 lg:w-115" />
+            <img
+              src="https://res.cloudinary.com/dldc2n70y/image/upload/v1774005073/CV_dev_02-2026_SVG_p53tby.svg"
+              alt="CV"
+              className="w-2xs text-app-content xs:w-90 lg:w-115"
+            />
           </div>
           <DrawerFooter className="pb-10 xs:pb-5">
             <Button
