@@ -4,7 +4,7 @@
 
 ## 📌 Description
 
-Voici mon site personnel que je vous invite à consulter à l'adresse suivante : .
+Voici mon site personnel que je vous invite à consulter à l'adresse suivante : https://www.julienbouchez.com/ (déployé chez l'hébergeur [Infomaniak](https://www.infomaniak.com)).
 
 ![Capture d'écran 1 - Home page](./public/Screen-portfolio-home.png)
 
