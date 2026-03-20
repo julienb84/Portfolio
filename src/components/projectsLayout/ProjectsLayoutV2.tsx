@@ -22,7 +22,7 @@ const ProjectsLayoutV2 = ({ projectsTab }: ProjectsLayoutV2Props) => {
             return (
               <div
                 key={project.id}
-                className="rounded-sm shadow-lg shadow-app-content md:max-w-80"
+                className="rounded-sm shadow-lg shadow-app-content/40 md:max-w-80"
               >
                 <Card className="relative mx-auto w-full pt-0 pb-0 rounded-sm *:[img:last-child]:rounded-b-none">
                   <div className="absolute inset-0 z-30 aspect-15/9 bg-black/8 dark:bg-black/50 backdrop-blur-sm" />

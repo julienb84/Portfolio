@@ -54,7 +54,7 @@ const HomeContent = () => {
         </div>
         <div className="px-4 sm:px-14 md:flex md:justify-center">
           <img
-            src={screenA}
+            src="https://res.cloudinary.com/dldc2n70y/image/upload/v1774005058/Screen-VSC_lioq5j.svg"
             className="aspect-9/16 object-cover object-[8%] rounded-sm brightness-80 sepia-10 md:aspect-3/2"
           />
         </div>
