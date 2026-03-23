@@ -2,6 +2,7 @@
 import PageLayout from "../layouts/PageLayout";
 import ContentWrapper from "../components/contentWrapper/ContentWrapper";
 import ProjectsLayoutV2 from "../components/projectsLayout/ProjectsLayoutV2";
+import PageMeta from "../components/common/PageMeta";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
@@ -20,16 +21,22 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
   const projectsTab = projectsData as Project[];
 
   useEffect(() => {
-    document.title = "Projects | Julien Bouchez";
+    document.title = "Projets | Julien Bouchez";
     setIsHome(false);
   }, []);
 
   return (
-    <PageLayout>
-      <ContentWrapper className="w-full">
-        <ProjectsLayoutV2 projectsTab={projectsTab} />
-      </ContentWrapper>
-    </PageLayout>
+    <>
+      <PageMeta
+        title="Projets | Julien Bouchez"
+        description="Découvrez les projets de Julien Bouchez, développeur full-stack : applications React, Node.js et solutions web modernes, performantes, structurées et avec une UX soignée."
+      />
+      <PageLayout>
+        <ContentWrapper className="w-full">
+          <ProjectsLayoutV2 projectsTab={projectsTab} />
+        </ContentWrapper>
+      </PageLayout>
+    </>
   );
 };
 

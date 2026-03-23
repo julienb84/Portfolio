@@ -15,6 +15,13 @@ const PageMeta = ({
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+
+    {/* SEO technique */}
+    <meta name="robots" content="index, follow" />
+
+    {/* Canonical */}
+    <link rel="canonical" href="https://www.julienbouchez.com/" />
+    <link rel="canonical" href="https://www.julienbouchez.com/projects" />
   </Helmet>
 );
 
