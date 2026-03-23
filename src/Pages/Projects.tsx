@@ -29,7 +29,7 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
     <>
       <PageMeta
         title="Projets | Julien Bouchez"
-        description="Découvrez les projets de Julien Bouchez, développeur full-stack : applications React, Node.js et solutions web modernes, performantes, structurées et avec une UX soignée."
+        description="Découvrez les projets de Julien Bouchez, développeur Full-Stack : applications React, Node.js et solutions web modernes, performantes, structurées et avec une UX soignée."
       />
       <PageLayout>
         <ContentWrapper className="w-full">
