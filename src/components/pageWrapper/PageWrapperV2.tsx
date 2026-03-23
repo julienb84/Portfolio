@@ -13,7 +13,7 @@ export default function PageWrapperV2({
 }: PageWrapperV2Props) {
   return (
     <div
-      className={twMerge(`mt-22 md:mt-28 lg:mt-28 lg:wrapper1 ${className}`)}
+      className={twMerge(`mt-21 md:mt-28 lg:mt-28 lg:wrapper1 ${className}`)}
     >
       {children}
     </div>

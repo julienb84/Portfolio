@@ -36,5 +36,6 @@ Ce projet est personnel. Il n’est pas destiné à un usage commercial.
 ## 📡 Contact
 
 - Julien Bouchez : julienbouchez@icloud.com
+- Site web : [julienbouchez.com](https://www.julienbouchez.com)
 - Profile GitHub : [@JulienBouchez](https://github.com/julienb84)
 - Profile LinkedIn : [@JulienBouchez](https://www.linkedin.com/in/julien-bouchez-developer/)
