@@ -1,7 +1,8 @@
 // COMPONENTS //
 import PageLayout from "../layouts/PageLayout";
+import ContentWrapper from "../components/contentWrapper/ContentWrapper";
 import HomeContent from "../components/home/HomeContent";
-import PageWrapperV2 from "../components/pageWrapper/PageWrapperV2";
+import PageMeta from "../components/common/PageMeta";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
@@ -12,16 +13,20 @@ type HomeProps = {
 
 const Home = ({ setIsHome }: HomeProps) => {
   useEffect(() => {
-    document.title = "Home | Julien Bouchez";
+    document.title = "Julien Bouchez | Full-Stack Developer";
     setIsHome(true);
   }, []);
 
   return (
     <>
+      <PageMeta
+        title="Julien Bouchez | Développeur Full-Stack"
+        description="Portfolio de Julien Bouchez, développeur full-stack spécialisé en React, Node.js et applications web modernes."
+      />
       <PageLayout>
-        <PageWrapperV2>
+        <ContentWrapper>
           <HomeContent />
-        </PageWrapperV2>
+        </ContentWrapper>
       </PageLayout>
     </>
   );
