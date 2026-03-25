@@ -13,7 +13,6 @@ type HomeProps = {
 
 const Home = ({ setIsHome }: HomeProps) => {
   useEffect(() => {
-    document.title = "Julien Bouchez | Full-Stack Developer";
     setIsHome(true);
   }, []);
 
@@ -22,6 +21,7 @@ const Home = ({ setIsHome }: HomeProps) => {
       <PageMeta
         title="Julien Bouchez | Développeur Full-Stack"
         description="Portfolio de Julien Bouchez, développeur full-stack spécialisé en React, Node.js et applications web modernes."
+        page=""
       />
       <PageLayout>
         <ContentWrapper>

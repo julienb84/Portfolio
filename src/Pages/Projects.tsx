@@ -21,7 +21,6 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
   const projectsTab = projectsData as Project[];
 
   useEffect(() => {
-    document.title = "Projets | Julien Bouchez";
     setIsHome(false);
   }, []);
 
@@ -30,6 +29,7 @@ const Projects = ({ setIsHome }: ProjectsProps) => {
       <PageMeta
         title="Projets | Julien Bouchez"
         description="Découvrez les projets de Julien Bouchez, développeur Full-Stack : applications React, Node.js et solutions web modernes, performantes, structurées et avec une UX soignée."
+        page="projects"
       />
       <PageLayout>
         <ContentWrapper className="w-full">

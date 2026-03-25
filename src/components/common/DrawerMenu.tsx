@@ -8,7 +8,7 @@ import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
 import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // UI //
 import { MdClose } from "react-icons/md";
@@ -46,7 +46,6 @@ const DrawerMenu = ({
   setIsOpen,
   isHome,
 }: DrawerMenuProps) => {
-  const navigate = useNavigate();
   return (
     <>
       <Drawer direction={direction} open={isOpen}>
@@ -60,9 +59,13 @@ const DrawerMenu = ({
         </DrawerTrigger>
         <DrawerContent className="data-[vaul-drawer-direction=right]:border-transparent z-2000">
           <DrawerHeader className="items-end pr-3">
-            <DrawerClose variant="default" size="icon" className="inline-flex">
+            <DrawerClose
+              variant="default"
+              size="icon"
+              className="inline-flex hover:bg-transparent"
+            >
               <MdClose
-                className="text-3xl"
+                className="text-3xl hover:text-destructive hover:rotate-90 transition-all duration-300"
                 onClick={() => {
                   setIsOpen(false);
                 }}
@@ -73,29 +76,31 @@ const DrawerMenu = ({
           </DrawerHeader>
           <section className="text-app-content flex flex-col pt-20 pl-3 gap-10">
             {isHome ? (
-              <Button
-                variant="default"
-                size="lg"
-                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold hover:tracking-wide transition-all duration-300"
-                onClick={() => {
-                  navigate("/projects");
-                  setIsOpen(false);
-                }}
-              >
-                Projets
-              </Button>
+              <Link to="/projects">
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold hover:tracking-wide transition-all duration-300"
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                >
+                  Projets
+                </Button>
+              </Link>
             ) : (
-              <Button
-                variant="default"
-                size="lg"
-                className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold hover:tracking-wide transition-all duration-300"
-                onClick={() => {
-                  navigate("/");
-                  setIsOpen(false);
-                }}
-              >
-                Home
-              </Button>
+              <Link to="/">
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="h-10 bg-transparent text-[28px] italic justify-start hover:bg-transparent hover:font-semibold hover:tracking-wide transition-all duration-300"
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                >
+                  Home
+                </Button>
+              </Link>
             )}
 
             <a
