@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 import ResumeDialog from "../common/ResumeDialog";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // DATA //
 import routerLogo from "../../assets/brand/rr_lockup_dark.svg";
@@ -22,8 +22,6 @@ import { SiExpress } from "react-icons/si";
 import { IoArrowForward } from "react-icons/io5";
 
 const HomeContent = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="flex flex-col gap-14">
@@ -116,17 +114,16 @@ const HomeContent = () => {
         </section>
       </div>
       <div className="px-4 mt-6 flex vs:justify-center sm:mt-8">
-        <Button
-          variant="default"
-          size="lg"
-          className="bg-app-content text-app-background h-10 hover:bg-app-content/80"
-          onClick={() => {
-            navigate("/projects");
-          }}
-        >
-          <span>Mes projets</span>
-          <IoArrowForward />
-        </Button>
+        <Link to="/projects">
+          <Button
+            variant="default"
+            size="lg"
+            className="bg-app-content text-app-background h-10 hover:bg-app-content/80"
+          >
+            <span>Mes projets</span>
+            <IoArrowForward />
+          </Button>
+        </Link>
       </div>
     </>
   );

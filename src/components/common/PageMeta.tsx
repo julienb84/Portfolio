@@ -3,9 +3,11 @@ import { HelmetProvider, Helmet } from "react-helmet-async";
 const PageMeta = ({
   title,
   description,
+  page,
 }: {
   title: string;
   description: string;
+  page: string;
 }) => (
   <Helmet>
     <title>{title}</title>
@@ -20,8 +22,7 @@ const PageMeta = ({
     <meta name="robots" content="index, follow" />
 
     {/* Canonical */}
-    <link rel="canonical" href="https://www.julienbouchez.com/" />
-    <link rel="canonical" href="https://www.julienbouchez.com/projects" />
+    <link rel="canonical" href={`https://www.julienbouchez.com/${page}`} />
   </Helmet>
 );
 
