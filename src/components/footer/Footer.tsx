@@ -13,46 +13,40 @@ const Footer = () => {
 
   return (
     <div className="min-h-32 w-screen bg-footer-background pt-2 px-4 flex vs:px-10 sm:justify-center">
-      <div className="w-full flex flex-col gap-3 sm:w-140">
+      <div className="w-full flex flex-col gap-3 sm:w-140 lg:w-180">
         <div className="flex justify-between">
-          <div className="flex flex-col gap-5">
-            <section className="flex flex-col gap-1 text-[14px]">
-              <p className="text-primary/60">Contact</p>
-              <a
-                href="mailto:julienbouchez@icloud.com"
-                target="_blank"
-                className="text-primary"
-              >
-                Email
-              </a>
-              <a
-                href="tel:+33672687641"
-                target="_blank"
-                className="text-primary"
-              >
-                Mobile
-              </a>
-            </section>
-          </div>
-          <div>
-            <section className="flex flex-col gap-1 text-[14px]">
-              <p className="text-primary/60">Connect</p>
-              <a
-                href="https://github.com/julienb84"
-                target="_blank"
-                className="text-primary"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/julien-bouchez-developer/"
-                target="_blank"
-                className="text-primary"
-              >
-                LinkedIn
-              </a>
-            </section>
-          </div>
+          <section className="flex flex-col gap-1 text-[14px]">
+            <p className="text-primary/60">Contact</p>
+            <a
+              href="mailto:julienbouchez@icloud.com"
+              target="_blank"
+              className="text-primary"
+            >
+              Email
+            </a>
+            <a href="tel:+33672687641" target="_blank" className="text-primary">
+              Mobile
+            </a>
+          </section>
+
+          <section className="flex flex-col gap-1 text-[14px]">
+            <p className="text-primary/60">Connect</p>
+            <a
+              href="https://github.com/julienb84"
+              target="_blank"
+              className="text-primary"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/julien-bouchez-developer/"
+              target="_blank"
+              className="text-primary"
+            >
+              LinkedIn
+            </a>
+          </section>
+
           <div>
             <ButtonGroup orientation="horizontal">
               <Button

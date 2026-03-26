@@ -65,7 +65,7 @@ const DrawerMenu = ({
               className="inline-flex hover:bg-transparent"
             >
               <MdClose
-                className="text-3xl hover:text-destructive hover:rotate-90 transition-all duration-300"
+                className="text-3xl text-app-content/70 hover:text-destructive hover:rotate-90 transition-all duration-300"
                 onClick={() => {
                   setIsOpen(false);
                 }}
