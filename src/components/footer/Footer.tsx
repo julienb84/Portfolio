@@ -20,11 +20,15 @@ const Footer = () => {
             <a
               href="mailto:julienbouchez@icloud.com"
               target="_blank"
-              className="text-primary"
+              className="text-app-content/90 hover:text-app-content hover:font-medium"
             >
               Email
             </a>
-            <a href="tel:+33672687641" target="_blank" className="text-primary">
+            <a
+              href="tel:+33672687641"
+              target="_blank"
+              className="text-app-content/90 hover:text-app-content hover:font-medium"
+            >
               Mobile
             </a>
           </section>
@@ -34,14 +38,14 @@ const Footer = () => {
             <a
               href="https://github.com/julienb84"
               target="_blank"
-              className="text-primary"
+              className="text-app-content/90 hover:text-app-content hover:font-medium"
             >
               GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/julien-bouchez-developer/"
               target="_blank"
-              className="text-primary"
+              className="text-app-content/90 hover:text-app-content hover:font-medium"
             >
               LinkedIn
             </a>

@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    Sitemap({ hostname: "https://julienbouchez.com" }),
+    Sitemap({ hostname: "https://www.julienbouchez.com" }),
   ],
   resolve: {
     alias: {

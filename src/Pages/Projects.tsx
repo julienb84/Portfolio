@@ -13,9 +13,9 @@ import projectsData from "../data/projectsData.json";
 // TYPE //
 import type { Project } from "../types/project";
 
-type ProjectsProps = {
+interface ProjectsProps {
   setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-};
+}
 
 const Projects = ({ setIsHome }: ProjectsProps) => {
   const projectsTab = projectsData as Project[];
