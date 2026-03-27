@@ -6,10 +6,23 @@ import PageMeta from "../components/common/PageMeta";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
-type HomeProps = {
+const personSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Julien Bouchez",
+  url: "https://www.julienbouchez.com",
+  jobTitle: "Développeur Full-Stack",
+  sameAs: [
+    "https://github.com/julienb84",
+    "https://www.linkedin.com/in/julien-bouchez-developer/",
+  ],
+});
+
+interface HomeProps {
   setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-};
+}
 
 const Home = ({ setIsHome }: HomeProps) => {
   useEffect(() => {
@@ -23,6 +36,9 @@ const Home = ({ setIsHome }: HomeProps) => {
         description="Portfolio de Julien Bouchez, développeur full-stack spécialisé en React, Node.js et applications web modernes."
         page=""
       />
+      <Helmet>
+        <script type="application/ld+json">{personSchema}</script>
+      </Helmet>
       <PageLayout>
         <ContentWrapper>
           <HomeContent />
