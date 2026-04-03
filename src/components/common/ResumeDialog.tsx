@@ -9,7 +9,7 @@ import DialogFooter from "../ui/dialog/dialogLayout/DialogFooter";
 import Button from "../ui/Button";
 
 // DATA //
-import cvToDownload from "../../assets/Julienbouchez_CV_dev_02-2026_000.pdf";
+import cvToDownload from "../../assets/Julienbouchez_CV_dev_03-2026_00.pdf";
 
 // UI //
 import { ImProfile } from "react-icons/im";
@@ -67,7 +67,7 @@ const ResumeDialog = ({
           </DialogHeader>
           <div className="flex justify-center">
             <img
-              src="https://res.cloudinary.com/dldc2n70y/image/upload/v1774005073/CV_dev_02-2026_SVG_p53tby.svg"
+              src="https://res.cloudinary.com/dldc2n70y/image/upload/v1775211241/CV_dev_03-2026_SVG_z5meeg.svg"
               alt="CV"
               className="w-200 text-app-content"
             />
