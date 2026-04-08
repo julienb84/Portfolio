@@ -6,25 +6,22 @@ import CatchAll from "./Pages/CatchAll";
 // COMPONENTS //
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import { ScrollToTop } from "./components/common/ScrollToTop";
 
 // REACT HOOKS & COMPONENTS //
-import { useState } from "react";
+// import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [isHome, setIsHome] = useState(false);
-
   return (
     <>
       <Router>
-        <Header isHome={isHome} />
+        <Header />
+        <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home setIsHome={setIsHome} />} />
-          <Route
-            path="/projects"
-            element={<Projects setIsHome={setIsHome} />}
-          />
-          <Route path="/*" element={<CatchAll setIsHome={setIsHome} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/*" element={<CatchAll />} />
         </Routes>
         <Footer />
       </Router>

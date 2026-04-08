@@ -8,7 +8,7 @@ import DrawerTitle from "../ui/drawer/drawerContent/DrawerTitle";
 import DrawerTrigger from "../ui/drawer/drawerComponents/DrawerTrigger";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // UI //
 import { MdClose } from "react-icons/md";
@@ -35,7 +35,6 @@ type DrawerMenuProps = {
     | "icon-lg";
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isHome: boolean;
 };
 
 const DrawerMenu = ({
@@ -44,8 +43,10 @@ const DrawerMenu = ({
   triggerSize,
   isOpen,
   setIsOpen,
-  isHome,
 }: DrawerMenuProps) => {
+  const { pathname } = useLocation();
+  const isHome = pathname !== "/projects";
+
   return (
     <>
       <Drawer direction={direction} open={isOpen}>

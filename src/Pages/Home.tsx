@@ -5,7 +5,6 @@ import HomeContent from "../components/home/HomeContent";
 import PageMeta from "../components/common/PageMeta";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 const personSchema = JSON.stringify({
@@ -20,15 +19,9 @@ const personSchema = JSON.stringify({
   ],
 });
 
-interface HomeProps {
-  setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-}
+// interface HomeProps {}
 
-const Home = ({ setIsHome }: HomeProps) => {
-  useEffect(() => {
-    setIsHome(true);
-  }, []);
-
+const Home = () => {
   return (
     <>
       <PageMeta

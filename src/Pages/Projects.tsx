@@ -5,7 +5,6 @@ import ProjectsLayoutV2 from "../components/projectsLayout/ProjectsLayoutV2";
 import PageMeta from "../components/common/PageMeta";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
-import { useEffect } from "react";
 
 // DATA //
 import projectsData from "../data/projectsData.json";
@@ -13,16 +12,10 @@ import projectsData from "../data/projectsData.json";
 // TYPE //
 import type { Project } from "../types/project";
 
-interface ProjectsProps {
-  setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-}
+// interface ProjectsProps {}
 
-const Projects = ({ setIsHome }: ProjectsProps) => {
+const Projects = () => {
   const projectsTab = projectsData as Project[];
-
-  useEffect(() => {
-    setIsHome(false);
-  }, []);
 
   return (
     <>

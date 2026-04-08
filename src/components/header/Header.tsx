@@ -8,13 +8,7 @@ import DrawerMenu from "../common/DrawerMenu";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-// UI //
-
-interface HeaderProps {
-  isHome: boolean;
-}
-
-const Header: React.FC<HeaderProps> = ({ isHome }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="h-16 w-screen fixed bg-app-background z-50">
@@ -32,7 +26,6 @@ const Header: React.FC<HeaderProps> = ({ isHome }) => {
           triggerSize="icon"
           isOpen={isOpen}
           setIsOpen={setIsOpen}
-          isHome={isHome}
         />
       </div>
     </div>

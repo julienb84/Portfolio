@@ -3,7 +3,6 @@ import PageLayout from "../layouts/PageLayout";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 // UI //
 import { TbError404 } from "react-icons/tb";
@@ -11,17 +10,8 @@ import { FaRegFaceSurprise } from "react-icons/fa6";
 import Button from "../components/ui/Button";
 import { IoArrowForward } from "react-icons/io5";
 
-type CatchAllProps = {
-  setIsHome: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const CatchAll = ({ setIsHome }: CatchAllProps) => {
+const CatchAll = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.title = "Not Found | Julien Bouchez";
-    setIsHome(true);
-  }, []);
 
   return (
     <PageLayout className="items-center gap-10">
