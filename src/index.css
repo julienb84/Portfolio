@@ -168,3 +168,10 @@
   max-width: 992px;
   margin: 0 auto;
 }
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

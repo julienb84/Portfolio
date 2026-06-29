@@ -68,16 +68,32 @@ const ProjectDialog = ({ project, triggerClassName }: ProjectDialogProps) => {
             </CardHeader>
             <CardContent>
               <p className="mb-2 font-semibold">Techno :</p>
-              <section className="flex gap-2">
-                <Badge variant="default" className="h-6">
-                  {project.framework}
-                </Badge>
-                <Badge variant="default" className="h-6">
-                  {project.router}
-                </Badge>
-                <Badge variant="default" className="h-6">
-                  {project.cssTools}
-                </Badge>
+              <section className="flex gap-2 flex-wrap">
+                {project.backend !== "" && (
+                  <Badge variant="default" className="h-6">
+                    {project.backend}
+                  </Badge>
+                )}
+                {project.apiRoutes !== "" && (
+                  <Badge variant="default" className="h-6">
+                    {project.apiRoutes}
+                  </Badge>
+                )}
+                {project.framework !== "" && (
+                  <Badge variant="default" className="h-6">
+                    {project.framework}
+                  </Badge>
+                )}
+                {project.router !== "" && (
+                  <Badge variant="default" className="h-6">
+                    {project.router}
+                  </Badge>
+                )}
+                {project.cssTools !== "" && (
+                  <Badge variant="default" className="h-6">
+                    {project.cssTools}
+                  </Badge>
+                )}
               </section>
             </CardContent>
             <CardFooter className="justify-center gap-8">

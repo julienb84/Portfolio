@@ -1,13 +1,12 @@
 // COMPONENTS //
-import ResumeView from "../common/ResumeView";
 import { CardBasic } from "../ui/Card";
 import Button from "../ui/Button";
-import ResumeDialog from "../common/ResumeDialog";
 
 // FRAMEWORKS COMPONENTS & HOOKS //
 import { Link } from "react-router-dom";
 
 // DATA //
+import cvToView from "../../assets/Julienbouchez_CV_dev_06-2026_00.pdf";
 import routerLogo from "../../assets/brand/rr_lockup_dark.svg";
 import stripeLogo from "../../assets/brand/Stripe wordmark - White.svg";
 import nodeLogo from "../../assets/brand/nodejsStackedWhite.svg";
@@ -20,6 +19,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiAxios } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { IoArrowForward } from "react-icons/io5";
+import { ImProfile } from "react-icons/im";
 
 const HomeContent = () => {
   return (
@@ -39,14 +39,17 @@ const HomeContent = () => {
             </p>
           </section>
           <section>
-            <ResumeView
-              triggerVariant="default"
-              triggerClassName="bg-app-content text-app-background h-10 md:hidden"
-            />
-            <ResumeDialog
-              triggerVariant="default"
-              triggerClassName="bg-app-content text-app-background h-10 hidden md:inline-flex md:hover:bg-app-content/80"
-            />
+            <Button
+              variant="default"
+              size="lg"
+              className="bg-app-content text-app-background h-10 inline-flex md:hover:bg-app-content/80"
+              onClick={() =>
+                window.open(cvToView, "_blank", "noopener,noreferrer")
+              }
+            >
+              Voir mon CV
+              <ImProfile />
+            </Button>
           </section>
         </div>
         <div className="px-4 sm:px-14 md:flex md:justify-center">

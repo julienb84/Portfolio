@@ -3,6 +3,8 @@
     "title": "Marvel Mirror",
     "projectType": "Full-Stack",
     "description": "Application web inspirée du site Marvel et réalisée en autonomie pendant ma formation de développeur.",
+    "backend": "Node.js",
+    "apiRoutes": "Express",
     "framework": "React",
     "router": "React Router",
     "cssTools": "SCSS",
