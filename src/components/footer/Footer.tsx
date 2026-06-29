@@ -10,6 +10,7 @@ import { HiSun } from "react-icons/hi2";
 
 const Footer = () => {
   const { theme, setTheme } = useTheme();
+  const date = new Date().getFullYear();
 
   return (
     <div className="min-h-32 w-screen bg-footer-background pt-2 px-4 flex vs:px-10 sm:justify-center">
@@ -96,7 +97,7 @@ const Footer = () => {
             </ButtonGroup>
           </div>
         </div>
-        <span className="text-primary text-[12px]">© Julien Bouchez 2026</span>
+        <span className="text-primary text-[12px]">{`© Julien Bouchez ${date}`}</span>
       </div>
     </div>
   );

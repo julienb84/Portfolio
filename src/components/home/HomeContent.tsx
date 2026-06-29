@@ -28,7 +28,7 @@ const HomeContent = () => {
         <div className="px-4 flex flex-col gap-5 sm:px-8 md:px-10 lg:px-4">
           <section className="text-app-content">
             <h1 className="text-[22px] font-semibold mb-2 md:text-[26px]">
-              Développeur Web et Mobile
+              Développeur Web
             </h1>
             <p className="text-[18px] font-medium tracking-wide sm:text-justify md:text-[22px]">
               Ingénieur du son expérimenté, j’ai choisi d’orienter ma carrière
